@@ -1,0 +1,8 @@
+
+framework module SCSDKCameraKitPushToDeviceExtension {
+  umbrella header "SCSDKCameraKitPushToDeviceExtension.h"
+
+  export *
+  module * { export * }
+}
+
