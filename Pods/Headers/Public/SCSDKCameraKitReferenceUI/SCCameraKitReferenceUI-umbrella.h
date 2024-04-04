@@ -1,0 +1,1 @@
+../../../Target Support Files/SCCameraKitReferenceUI/SCCameraKitReferenceUI-umbrella.h

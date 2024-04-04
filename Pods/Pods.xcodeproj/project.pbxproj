@@ -1,0 +1,2348 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		8C9A244C135E7D44CFF747DA42FD606C /* SCCameraKitPushToDeviceExtension */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 765A56A207707D4168C3A21E27653BB4 /* Build configuration list for PBXAggregateTarget "SCCameraKitPushToDeviceExtension" */;
+			buildPhases = (
+				8A32E20D6E59E2533F4716C101A8BCF6 /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+				D446E66E06BD0CACED4B2CA8791F522D /* PBXTargetDependency */,
+			);
+			name = SCCameraKitPushToDeviceExtension;
+		};
+		DC460828FF0F2F76C86CA020169EDB5F /* SnapSDK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 4B34A1B2E09AEE9608C1EAE377BC3038 /* Build configuration list for PBXAggregateTarget "SnapSDK" */;
+			buildPhases = (
+				CB3E12B93B171AD0B116E20FE0AEFCB1 /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+			);
+			name = SnapSDK;
+		};
+		E447E7758C18A389A6216559CE9ED4D4 /* SCCameraKitLoginKitAuth */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 6542EA9C6268E966ADFB057DC06D4D50 /* Build configuration list for PBXAggregateTarget "SCCameraKitLoginKitAuth" */;
+			buildPhases = (
+				5A0C20262687781A43D2093EAD0E19C4 /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+				06C2672219E2C8AA017E613B5DDD61BB /* PBXTargetDependency */,
+				C752F28D76D3E7F3A312E5F1536B692F /* PBXTargetDependency */,
+			);
+			name = SCCameraKitLoginKitAuth;
+		};
+		F6A52FAA4585E09FD564FFBB4059866C /* SCCameraKitBaseExtension */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D16A29461D483A4A9E5B27CA9B482CE3 /* Build configuration list for PBXAggregateTarget "SCCameraKitBaseExtension" */;
+			buildPhases = (
+				7F2133FE2F4CC95E0C6F3E90D8DBCAB8 /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+				D15D98BA9D9CF4905F9863C0B370AE1C /* PBXTargetDependency */,
+			);
+			name = SCCameraKitBaseExtension;
+		};
+		FAC495339E6C2D0F78A4D5A22BC1A537 /* SCCameraKit */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 1EA7E6B993839DCFAF0039BA2A61A860 /* Build configuration list for PBXAggregateTarget "SCCameraKit" */;
+			buildPhases = (
+				AF49CF01C76B86B11BD85A7837EB545C /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+			);
+			name = SCCameraKit;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0702DE1E0580DEC69374F50BA44A8641 /* MediaPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3CDE2CB182D2A1C3DC2BC5715818F7 /* MediaPickerView.swift */; };
+		080A3F5467B48DB9F2B9F260A26BED1E /* SCCameraKitReferenceUI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 642B4ECC73D13FBECB39C37AC359330D /* SCCameraKitReferenceUI-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0907AA138B7BE8C19A89B49F476D3AC2 /* TapAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CCA261A20E851F10BAA2D3E4398116 /* TapAnimationView.swift */; };
+		0DDC09A788B985421CFBC6A1EE610CBD /* RingLightGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2428028F7E577529E7B9CCC9FE0640 /* RingLightGradientView.swift */; };
+		0E8DD8546F32A84D9706816E402D8300 /* ControlSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F6A75BD7CFB06CDE4F3C65E8494DA0 /* ControlSlider.swift */; };
+		14329682F30CF1D30648648AC987EB25 /* CarouselCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E240316E323819D0EAD4DB870C4AD7 /* CarouselCollectionViewLayout.swift */; };
+		14413924B8B8C6FC922239213AFADAE6 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AB10F91C9CC48B801CD6B8682FEBA8 /* CameraView.swift */; };
+		1634123DED7E99B1C798511701BB51B1 /* Pods-StepVision-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 217BDD061BD09DE13812D189BC96AA8F /* Pods-StepVision-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		190EE5640B61A6AC881039BE677BEA85 /* Testable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916EBDCF7309F9372F9FF9D9E8CAAE4B /* Testable.swift */; };
+		1B52186CA87829B5B2DBCEE3C4D78921 /* UITapGestureRecognizer+AVCaptureDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310929DBF00D012BB95E3BE709406C94 /* UITapGestureRecognizer+AVCaptureDevice.swift */; };
+		1D92596F59D10C1365EBD2F992281D43 /* MediaPickerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57344773377D4305D77195E9088F7067 /* MediaPickerViewCell.swift */; };
+		20E54D8B811622A514943C40F71C0D08 /* SCCameraKitReferenceUI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A73A5FE8E1EB2976DDFF483F0163E2 /* SCCameraKitReferenceUI-dummy.m */; };
+		2929677D21C956A4C0A90C7E90163112 /* CameraActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D707ACC240030AFAE008EDE9E363620D /* CameraActionsView.swift */; };
+		2A21E624F6FE4150861FD25429D461CE /* RingLightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F476247241F4D993A04CD76E558D7A /* RingLightView.swift */; };
+		35310D74DCEC7BD319E969D6BAC8F006 /* Pods-StepVisionTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AFF9C9E91E7707373F08F0CA123B64 /* Pods-StepVisionTests-dummy.m */; };
+		47811FF6961F0B4AF6A53B2BD469F187 /* ImagePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8C918E162FDC1CF5E4CD220FB29070 /* ImagePreviewView.swift */; };
+		48F3F5B1CF680B7A4923E85D64771031 /* FlashModeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C39D439E553637C98FF81E4FDA4A44 /* FlashModeSelectionView.swift */; };
+		4BE57F3373F1D9E39F86F1263F76F8D8 /* CameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1FF1629219CAA6676E35230AD1ECEF /* CameraButton.swift */; };
+		4C1F7ED7E4AA93ABF8BABB5BFCD2C3E1 /* ImagePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C34C8BFDA9233C55AC934D17837808E /* ImagePreviewViewController.swift */; };
+		4D2A1D0EE2D506A4309CA18AE24A5CFD /* CarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FD0FCA5139AC1C7FCFEB0D8335D4A0 /* CarouselItem.swift */; };
+		5737CC2804F5FD13BA6C31A9C424BE12 /* KeyboardInputAccessoryViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBAA2E876DAD9104806E120FCB8680E /* KeyboardInputAccessoryViewProvider.swift */; };
+		575807216656105E2097AD0BD7581862 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE132D4A2CD2D78DCE4B5E239C2FAA9C /* CameraController.swift */; };
+		5943D7E76C7CAE4A762D286BB65A54C9 /* MediaPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279D9B2E5225A5C128C964233F8E60C5 /* MediaPickerView.swift */; };
+		5AA4A00E9D2F5C5A8D78B02C6CB81DB7 /* ControlDismissalHintHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F26FE42303053689067A1D77EAED43A /* ControlDismissalHintHelper.swift */; };
+		5E547B35409CAE57668CBBE7A20920A5 /* FlashControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D9A778173446C2BF90F1335F3A38C5 /* FlashControlView.swift */; };
+		6A931ACE61E6ED338B244338D4D306BE /* CarouselImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9C3E61FE30D31C8EF6BB8FFF6BBAB9 /* CarouselImageLoader.swift */; };
+		76EFF081A08BAF727FF1B032437D657E /* VideoPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F313B604FCD295AF43415E8C920FA13 /* VideoPreviewView.swift */; };
+		7927C9A4F9E3AF6DAC1181E8D3CC0640 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BC78FF563F60100E343982BE705853 /* CarouselView.swift */; };
+		7D1C8D8460D5522D82A389163AAEC6F2 /* SCCameraKitReferenceSwiftUI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D478634CC42087C847EB4920A93AE0D7 /* SCCameraKitReferenceSwiftUI-dummy.m */; };
+		8164E004FDF4611A9202099BB71A081F /* Reference.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62C9841632E1CA58174572C74AAFF65D /* Reference.xcassets */; };
+		843BE372E62876C788BD72E7D4F31DC9 /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E1ED9962258BE308177020AD024B46 /* CarouselCollectionViewCell.swift */; };
+		8AFF4A79FEB21F4122B05A7C02709B9C /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B1455B77AABE19D9AA83BFEEF5890C /* PreviewViewController.swift */; };
+		8CD6E9EEC7E11604A7731F7786D22FE7 /* ButtonShadowHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5588F5E90898AEDD52257D4E7326C395 /* ButtonShadowHelper.swift */; };
+		92B7F65E2E4D75221D006E3B3472BC27 /* RingLightColorSelectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F00D68FF68A218C7158D3636775836 /* RingLightColorSelectionViewCell.swift */; };
+		93065EB2CA5A8A02E2E953DF09F21262 /* ImageHighlightHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F7852FE65FCC6694EF9CA9A943A8C5 /* ImageHighlightHelper.swift */; };
+		98D0D8A88FBC5CA391B4E5EDA8D0C179 /* Snapchat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB27F2458CDF5D792195D2D6B638D5 /* Snapchat.swift */; };
+		A0CE9558B1900A1D1286600C5C0E386B /* Pods-StepVision-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C1474163309E1264A2F066D2C1CAC3 /* Pods-StepVision-dummy.m */; };
+		A90548278312043011A51844086BD053 /* BundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005939A5E0CD3E459FCD1135DD23EB3 /* BundleHelper.swift */; };
+		AB982314A1256C62581589A72A82F874 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D129D4B1F999058145EFD5A7D35C2 /* Recorder.swift */; };
+		B079FB2C871FFAA3C51F234EE4A5C51B /* SnapAttributionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BF179D963BAD4106996B789FAA8315 /* SnapAttributionView.swift */; };
+		B2BFBA0FE47C29B76DE0D120F08492BA /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDDC6CBFDF56F2A931F309B1EE3216B /* CameraView.swift */; };
+		B457EDC32DB1F85F73770A1BE469D3D4 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C9EC8FC1B9EACBA8923F009C7FB6A2 /* PreviewView.swift */; };
+		BB99C1F9C804D9D44FF500E0FB910776 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B66D920435AD1A750B629752D749BA4 /* CarouselView.swift */; };
+		BBB7EA398F2AC544EB6EFD57E93D0EA2 /* CameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE28BD7C38795ED97E40BEBBCF3CA40 /* CameraButton.swift */; };
+		BBCD624A9BC2D99CDA376766810FE680 /* OutputSizeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4754039D7CF642CB0AA65620ABE4BBDC /* OutputSizeHelper.swift */; };
+		BEFE49E47A88DE2BA468ED1BBCBC30FF /* MediaPickerViewLoadingFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AEADE5EA58CE6BDEB2BA20DF9E82A1 /* MediaPickerViewLoadingFooter.swift */; };
+		C222F175FDAD49D16E5323652248665C /* MessageNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F92B22AE49389D1D1BA9A0D1C05111 /* MessageNotificationView.swift */; };
+		C5541267ACE984B28615DD1909DEFC26 /* CameraConfigurableActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF13DE674C1B38D0D5920E92FE005442 /* CameraConfigurableActionView.swift */; };
+		C56347B8F132E8DF1089805126C5E069 /* VideoPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64A777FD7E0C1DE94A5D35E0F84FC3A /* VideoPreviewViewController.swift */; };
+		C8BE640F5574DBA2C355B483FA78AF87 /* SCCameraKitReferenceSwiftUI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E27C0FA5C0E49F063964BFE869D657B3 /* SCCameraKitReferenceSwiftUI-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CEA7440DF14A5ACDA3965F3CA8B98683 /* CameraBottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B8192277E0B2CFC91FA2FAF0DF7F07 /* CameraBottomBar.swift */; };
+		D0AB7B73E3181F01CF3864D0CA539D83 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C9B25E9545C6D86EE6440C8BFFBB800 /* Localizable.strings */; };
+		D53905CBA277C4313BE2A252D138CB60 /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8A0E950CE00AE3A1E8DFE07BD8695 /* LocalizedString.swift */; };
+		DAF115B7C645CF13CA98A5DAEE13914F /* UIFont+SCTypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3FA9961A09079F5D18A28F86BD1B9F /* UIFont+SCTypography.swift */; };
+		DF5538FE14C2457234B5B1EE42B285D8 /* UserDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D198EAC9F3868A955F93249F5617BC /* UserDataProvider.swift */; };
+		DFC4A0CF3934341F3B31A72674E198AA /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03945ECF7D6F6ABA15E65AF93AE2487A /* UIColor+Hex.swift */; };
+		E7B0141DFDDD0F968DD71621B48539C7 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FDCD8639BA9C2525457438ED61E1A3 /* CameraViewController.swift */; };
+		E88DE2A8E8F32ADDD612E0C34A8D26A9 /* CameraViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D888F3C84B867CAA435A4DE5DB5EF0E /* CameraViewState.swift */; };
+		ED62C71ED35427A209FE0ABEA07B39F9 /* AdjustmentControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A98D8FA08B6706955E6D212DF8A2E3 /* AdjustmentControlView.swift */; };
+		F3FF1868EDF21B54492666503394389D /* RingLightColorSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1DB8614918C0A327E2581D5E794F93 /* RingLightColorSelectionView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1EC0CC93F4B638EAD0D70325A423610F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAC495339E6C2D0F78A4D5A22BC1A537;
+			remoteInfo = SCCameraKit;
+		};
+		1F8C411DFD4F63F63CE6786AB6AEFBD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C9A244C135E7D44CFF747DA42FD606C;
+			remoteInfo = SCCameraKitPushToDeviceExtension;
+		};
+		343AB495E467F25BCD94010EC48AA44B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6A52FAA4585E09FD564FFBB4059866C;
+			remoteInfo = SCCameraKitBaseExtension;
+		};
+		4C3A4676ACA08C985A3B6F58B4ECE901 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC460828FF0F2F76C86CA020169EDB5F;
+			remoteInfo = SnapSDK;
+		};
+		54635AD3CE021091343CB0A040700A74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2ABA7142F8FE3685F104DD72C19A07A;
+			remoteInfo = SCCameraKitReferenceSwiftUI;
+		};
+		7993DDBC4ADEC63581D5E48A5C31451B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 247D0F326E39A4020425524A8D634509;
+			remoteInfo = "SCCameraKitReferenceUI-CameraKitReferenceUI";
+		};
+		8AD2AC002A2A9A03B33B8C977B43FD86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 302A0BA936FB32AFF970FC23F72BDEAA;
+			remoteInfo = SCCameraKitReferenceUI;
+		};
+		BD71EFFF2254F9B6951FFD8CCF7C78A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAC495339E6C2D0F78A4D5A22BC1A537;
+			remoteInfo = SCCameraKit;
+		};
+		C785E54BF091815110AF0BDF168262CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAC495339E6C2D0F78A4D5A22BC1A537;
+			remoteInfo = SCCameraKit;
+		};
+		C7C5A7167B0F93DE5692DDCFE57FF5FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6A52FAA4585E09FD564FFBB4059866C;
+			remoteInfo = SCCameraKitBaseExtension;
+		};
+		C84634B86F913C56CB97811F4EB3B500 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 302A0BA936FB32AFF970FC23F72BDEAA;
+			remoteInfo = SCCameraKitReferenceUI;
+		};
+		C9DB7DD37E3EAB707DBDA3F54D632C31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E447E7758C18A389A6216559CE9ED4D4;
+			remoteInfo = SCCameraKitLoginKitAuth;
+		};
+		D73F2F8A9065FD4493EB2FEDF3EBE116 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6BBDF4054BCBA12E1061365DA250F88;
+			remoteInfo = "Pods-StepVision";
+		};
+		DAFDAC395E49586DA8D9855276B335A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAC495339E6C2D0F78A4D5A22BC1A537;
+			remoteInfo = SCCameraKit;
+		};
+		ED3C18D03E11A6C1F94BDD32E514DA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC460828FF0F2F76C86CA020169EDB5F;
+			remoteInfo = SnapSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02A6F652C149F4A9805CC43CF584AF08 /* Pods-StepVisionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StepVisionTests.debug.xcconfig"; sourceTree = "<group>"; };
+		037C05E6169DAF884E731E35F146AA2E /* SCSDKLoginKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = SCSDKLoginKit.xcframework; sourceTree = "<group>"; };
+		03945ECF7D6F6ABA15E65AF93AE2487A /* UIColor+Hex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Hex.swift"; path = "Helper/UIColor+Hex.swift"; sourceTree = "<group>"; };
+		0601FEA6EA7DA378301855CC78D2650B /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		07F7852FE65FCC6694EF9CA9A943A8C5 /* ImageHighlightHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageHighlightHelper.swift; path = Helper/ImageHighlightHelper.swift; sourceTree = "<group>"; };
+		09484C32C0B64E8FB4E20011DA595B85 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "fil-PH.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		0C5B536EA73F02CF949D9190F14DFA55 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0EBAA2E876DAD9104806E120FCB8680E /* KeyboardInputAccessoryViewProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardInputAccessoryViewProvider.swift; path = Keyboard/KeyboardInputAccessoryViewProvider.swift; sourceTree = "<group>"; };
+		0FE28BD7C38795ED97E40BEBBCF3CA40 /* CameraButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraButton.swift; sourceTree = "<group>"; };
+		10FB150273042B1BEDB5656040C976EC /* SCCameraKitReferenceSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCCameraKitReferenceSwiftUI.release.xcconfig; sourceTree = "<group>"; };
+		12A73A5FE8E1EB2976DDFF483F0163E2 /* SCCameraKitReferenceUI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SCCameraKitReferenceUI-dummy.m"; sourceTree = "<group>"; };
+		12D9A778173446C2BF90F1335F3A38C5 /* FlashControlView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlashControlView.swift; path = CameraUI/Flash/FlashControlView.swift; sourceTree = "<group>"; };
+		13B1455B77AABE19D9AA83BFEEF5890C /* PreviewViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreviewViewController.swift; path = Preview/PreviewViewController.swift; sourceTree = "<group>"; };
+		15A7F5F754536D0846871DCA17C557D3 /* SnapSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapSDK.release.xcconfig; sourceTree = "<group>"; };
+		1BA094BEB3F01FC095852423607F0492 /* Pods-StepVisionTests.enterprise.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StepVisionTests.enterprise.xcconfig"; sourceTree = "<group>"; };
+		1BBE1FB578F708935D52F4F4D8BD4E5A /* Pods-StepVision-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StepVision-acknowledgements.plist"; sourceTree = "<group>"; };
+		1C34C8BFDA9233C55AC934D17837808E /* ImagePreviewViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePreviewViewController.swift; path = Preview/ImagePreviewViewController.swift; sourceTree = "<group>"; };
+		1F26FE42303053689067A1D77EAED43A /* ControlDismissalHintHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ControlDismissalHintHelper.swift; path = Helper/ControlDismissalHintHelper.swift; sourceTree = "<group>"; };
+		2005939A5E0CD3E459FCD1135DD23EB3 /* BundleHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BundleHelper.swift; path = Helper/BundleHelper.swift; sourceTree = "<group>"; };
+		2171F8E935B126BC6473C471F88BE4A5 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
+		217BDD061BD09DE13812D189BC96AA8F /* Pods-StepVision-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StepVision-umbrella.h"; sourceTree = "<group>"; };
+		21E785307B243B2B8DCCF8B83B1849F8 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "es-ES.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		22D1173CC59D48239E12CD88B76284C7 /* SCCameraKitBaseExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCCameraKitBaseExtension.debug.xcconfig; sourceTree = "<group>"; };
+		23FDCD8639BA9C2525457438ED61E1A3 /* CameraViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = CameraUI/CameraViewController.swift; sourceTree = "<group>"; };
+		247AB113F373E57C1F9BB964A54E6CAD /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		25C39D439E553637C98FF81E4FDA4A44 /* FlashModeSelectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlashModeSelectionView.swift; path = CameraUI/Flash/FlashModeSelectionView.swift; sourceTree = "<group>"; };
+		279D9B2E5225A5C128C964233F8E60C5 /* MediaPickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MediaPickerView.swift; sourceTree = "<group>"; };
+		29BF179D963BAD4106996B789FAA8315 /* SnapAttributionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapAttributionView.swift; path = Views/SnapAttributionView.swift; sourceTree = "<group>"; };
+		2B66D920435AD1A750B629752D749BA4 /* CarouselView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		2C4012838F4206D93FEBE9BE5F7DE944 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "ta-IN.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		2CE51AD312EBFC1BE27138BDBDADB16E /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		2D888F3C84B867CAA435A4DE5DB5EF0E /* CameraViewState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraViewState.swift; sourceTree = "<group>"; };
+		2F2428028F7E577529E7B9CCC9FE0640 /* RingLightGradientView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RingLightGradientView.swift; path = CameraUI/Flash/RingLight/RingLightGradientView.swift; sourceTree = "<group>"; };
+		2F313B604FCD295AF43415E8C920FA13 /* VideoPreviewView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VideoPreviewView.swift; sourceTree = "<group>"; };
+		30F7B8F920F9DF60A914B6255A217ED0 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		310929DBF00D012BB95E3BE709406C94 /* UITapGestureRecognizer+AVCaptureDevice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITapGestureRecognizer+AVCaptureDevice.swift"; path = "Helper/UITapGestureRecognizer+AVCaptureDevice.swift"; sourceTree = "<group>"; };
+		3183A6A3EB6415E35BEBB163523DEEA3 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		32C94CF01790AD0E6A33831AAE5DE97F /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "hi-IN.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		36E1ED9962258BE308177020AD024B46 /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CarouselCollectionViewCell.swift; path = Carousel/CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
+		3A5098439219D49E4FEF32403F23375F /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "es-MX.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		3B101C9F7D6D6C83AC05D589746D7C56 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = el.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3FFF165531D701ADA79D889A264C97A6 /* SCCameraKitReferenceUI */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = SCCameraKitReferenceUI; path = libSCCameraKitReferenceUI.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		40B348EF7B05B242E73422786D54EFAF /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		41CCA261A20E851F10BAA2D3E4398116 /* TapAnimationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TapAnimationView.swift; path = Views/TapAnimationView.swift; sourceTree = "<group>"; };
+		4213C6E259C1C34D25E5E6223336131E /* SCCameraKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCCameraKit.release.xcconfig; sourceTree = "<group>"; };
+		43C8A0E950CE00AE3A1E8DFE07BD8695 /* LocalizedString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocalizedString.swift; path = Localization/LocalizedString.swift; sourceTree = "<group>"; };
+		4754039D7CF642CB0AA65620ABE4BBDC /* OutputSizeHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OutputSizeHelper.swift; path = Helper/OutputSizeHelper.swift; sourceTree = "<group>"; };
+		49AFF9C9E91E7707373F08F0CA123B64 /* Pods-StepVisionTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StepVisionTests-dummy.m"; sourceTree = "<group>"; };
+		4B9D861BE6D18F42524A5DA70E8F71AF /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "ms-MY.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4D908B8852FE48766BEAEFBB23381DC3 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4EDDCF81E45E410D578E8C8E2661FEC4 /* SCSDKCameraKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = SCSDKCameraKit.xcframework; sourceTree = "<group>"; };
+		51E36900F4AE44A0FCFF45ED4FFB9EC0 /* SCCameraKitPushToDeviceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCCameraKitPushToDeviceExtension.debug.xcconfig; sourceTree = "<group>"; };
+		52C1474163309E1264A2F066D2C1CAC3 /* Pods-StepVision-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StepVision-dummy.m"; sourceTree = "<group>"; };
+		5588F5E90898AEDD52257D4E7326C395 /* ButtonShadowHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonShadowHelper.swift; path = Helper/ButtonShadowHelper.swift; sourceTree = "<group>"; };
+		56F00D68FF68A218C7158D3636775836 /* RingLightColorSelectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RingLightColorSelectionViewCell.swift; path = CameraUI/Flash/RingLight/RingLightColorSelectionViewCell.swift; sourceTree = "<group>"; };
+		57344773377D4305D77195E9088F7067 /* MediaPickerViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MediaPickerViewCell.swift; path = MediaPicker/MediaPickerViewCell.swift; sourceTree = "<group>"; };
+		5AA5575A024742601E723E6CE6171A42 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5EE6BE3EF76E9319C924CCF561F09A7C /* SnapSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "SnapSDK-xcframeworks.sh"; sourceTree = "<group>"; };
+		5EF7021C367AC973A21029845CEF2352 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "en-GB.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		62C9841632E1CA58174572C74AAFF65D /* Reference.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Reference.xcassets; path = Resources/Reference.xcassets; sourceTree = "<group>"; };
+		62E2ECC44377A44805612AD12D7AF64E /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "te-IN.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		642B4ECC73D13FBECB39C37AC359330D /* SCCameraKitReferenceUI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCCameraKitReferenceUI-umbrella.h"; sourceTree = "<group>"; };
+		6575879C32AEA826027BBE620D2A966F /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
+		65DE31E07444159984B97457962E5F16 /* SCCameraKitLoginKitAuth-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "SCCameraKitLoginKitAuth-xcframeworks.sh"; sourceTree = "<group>"; };
+		670B3F98DE4321CF6C63DA03412CFB25 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = fi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6C437E37EAA2EB0B304C9B2BA6FD7073 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		6F3CDE2CB182D2A1C3DC2BC5715818F7 /* MediaPickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MediaPickerView.swift; path = MediaPicker/MediaPickerView.swift; sourceTree = "<group>"; };
+		7509689A3237A2DEC24E02B4D6E189BD /* Pods-StepVision-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StepVision-frameworks.sh"; sourceTree = "<group>"; };
+		75849846C4523D1BDA3EC3A1EBE009D4 /* Pods-StepVision-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StepVision-resources.sh"; sourceTree = "<group>"; };
+		75F476247241F4D993A04CD76E558D7A /* RingLightView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RingLightView.swift; path = CameraUI/Flash/RingLight/RingLightView.swift; sourceTree = "<group>"; };
+		768C6A9A2EDF7C58AF1A26952264854F /* SCSDKCoreKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = SCSDKCoreKit.xcframework; sourceTree = "<group>"; };
+		780D6F265B55212D9B778A9BF7A8AC6D /* Pods-StepVision */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-StepVision"; path = "libPods-StepVision.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79DB805EC66914DEBD00CAE31D97435B /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "pa-IN.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		79F92B22AE49389D1D1BA9A0D1C05111 /* MessageNotificationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MessageNotificationView.swift; path = Views/MessageNotificationView.swift; sourceTree = "<group>"; };
+		7A3F669F8991576D0C9AF5465EC3B941 /* Pods-StepVision.enterprise.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StepVision.enterprise.xcconfig"; sourceTree = "<group>"; };
+		7C19A34CABD315645FBD9633B4B5F30E /* SCSDKCameraKitLoginKitAuth.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = SCSDKCameraKitLoginKitAuth.xcframework; sourceTree = "<group>"; };
+		7C535210D48F11DE7D9BADD3FD37B95B /* SCCameraKitLoginKitAuth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCCameraKitLoginKitAuth.release.xcconfig; sourceTree = "<group>"; };
+		7F0E9E74EB498EC6AA8891582630DF9A /* SCCameraKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCCameraKit.debug.xcconfig; sourceTree = "<group>"; };
+		7F32F7BB13D220119319B8519791CD4C /* SCCameraKitReferenceUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCCameraKitReferenceUI.release.xcconfig; sourceTree = "<group>"; };
+		82AB54C552D00A73AC49D2B2C3B4F89E /* SCCameraKitReferenceUI-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCCameraKitReferenceUI-prefix.pch"; sourceTree = "<group>"; };
+		8326F55540695DC736A89F06507B8FBE /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "kn-IN.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		878270921D492C0AAE376C5113C1A7AD /* SCSDKCameraKitBaseExtension.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = SCSDKCameraKitBaseExtension.xcframework; sourceTree = "<group>"; };
+		87E240316E323819D0EAD4DB870C4AD7 /* CarouselCollectionViewLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CarouselCollectionViewLayout.swift; path = Carousel/CarouselCollectionViewLayout.swift; sourceTree = "<group>"; };
+		8A8C0634CE9CDB1258FB4FF60D905F69 /* SCCameraKitReferenceSwiftUI-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCCameraKitReferenceSwiftUI-prefix.pch"; sourceTree = "<group>"; };
+		8C1DB8614918C0A327E2581D5E794F93 /* RingLightColorSelectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RingLightColorSelectionView.swift; path = CameraUI/Flash/RingLight/RingLightColorSelectionView.swift; sourceTree = "<group>"; };
+		8CDDC6CBFDF56F2A931F309B1EE3216B /* CameraView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		8D49534FA8A33512A9419AAB969CB445 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8D91F3FA8DEBF58BB2512C1768B8BD61 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8EEB27F2458CDF5D792195D2D6B638D5 /* Snapchat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Snapchat.swift; path = Snapchat/Snapchat.swift; sourceTree = "<group>"; };
+		9113AE9B506F130FEC2F80B28553947F /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "gu-IN.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		916EBDCF7309F9372F9FF9D9E8CAAE4B /* Testable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Testable.swift; path = Support/Testable.swift; sourceTree = "<group>"; };
+		91F275323EE35648C65B2421F243AAAC /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
+		95724BD896FA6CABF840C00683B8521A /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		96AEADE5EA58CE6BDEB2BA20DF9E82A1 /* MediaPickerViewLoadingFooter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MediaPickerViewLoadingFooter.swift; path = MediaPicker/MediaPickerViewLoadingFooter.swift; sourceTree = "<group>"; };
+		975E9984912683BF4B996B021F79188A /* Pods-StepVision-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StepVision-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9C3495A6B6EDB3E61FE6D0C79A8FC02F /* Pods-StepVisionTests */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-StepVisionTests"; path = "libPods-StepVisionTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D1EFF150B066D5973DEEE248F0AE1A1 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "mr-IN.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F7E1756417D26E088C565A8D8FB7961 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "es-AR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		9F8C918E162FDC1CF5E4CD220FB29070 /* ImagePreviewView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImagePreviewView.swift; sourceTree = "<group>"; };
+		A1D5A2A9637F051C84247F9AAE53D51D /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AB5ED8F1B35F0E968640BC016440C58E /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "bn-BD.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		AD348A041F6B9B7E8349D0DAA0160572 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "th-TH.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		AD64E6550F2C5E5F28F1C21CA5D0985C /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "bn-IN.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		AE132D4A2CD2D78DCE4B5E239C2FAA9C /* CameraController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraController.swift; path = Camera/CameraController.swift; sourceTree = "<group>"; };
+		AF13DE674C1B38D0D5920E92FE005442 /* CameraConfigurableActionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraConfigurableActionView.swift; path = CameraUI/CameraControlStrip/CameraConfigurableActionView.swift; sourceTree = "<group>"; };
+		B06220F948DC65C55CF755E6D6DFB764 /* SCCameraKitReferenceSwiftUI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SCCameraKitReferenceSwiftUI.modulemap; sourceTree = "<group>"; };
+		B091C0ED073BFE097F9991D69639DD5A /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "ml-IN.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		B339B350138A7730C868E34A4D5496B0 /* SCCameraKitReferenceSwiftUI */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = SCCameraKitReferenceSwiftUI; path = libSCCameraKitReferenceSwiftUI.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B53E2FE23F52DFC4911A97EBF81B8258 /* Pods-StepVision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StepVision.release.xcconfig"; sourceTree = "<group>"; };
+		B5BC78FF563F60100E343982BE705853 /* CarouselView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CarouselView.swift; path = Carousel/CarouselView.swift; sourceTree = "<group>"; };
+		B64A777FD7E0C1DE94A5D35E0F84FC3A /* VideoPreviewViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VideoPreviewViewController.swift; path = Preview/VideoPreviewViewController.swift; sourceTree = "<group>"; };
+		B8B8192277E0B2CFC91FA2FAF0DF7F07 /* CameraBottomBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraBottomBar.swift; path = Views/CameraBottomBar.swift; sourceTree = "<group>"; };
+		BA8182D36D9847648F3EA9EE7C227C98 /* Pods-StepVisionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StepVisionTests.release.xcconfig"; sourceTree = "<group>"; };
+		BBC8A94F1472E0F88C40F484C989A6C4 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C1823E7C959878D0C888C54DB0D0425D /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "vi-VN.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		C362E7127BEAF43864CF0D0BD4ED411E /* SCSDKCreativeKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = SCSDKCreativeKit.xcframework; sourceTree = "<group>"; };
+		C5EAE20B5FEC0011B94240DA58308E68 /* SCSDKCameraKitPushToDeviceExtension.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = SCSDKCameraKitPushToDeviceExtension.xcframework; sourceTree = "<group>"; };
+		C8CDAA3523E28F6506A94A23AF63715E /* SCCameraKitReferenceUI-CameraKitReferenceUI */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "SCCameraKitReferenceUI-CameraKitReferenceUI"; path = CameraKitReferenceUI.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		C90B1746A8F45A7CA0C69E9066ED13D9 /* SCCameraKitLoginKitAuth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCCameraKitLoginKitAuth.debug.xcconfig; sourceTree = "<group>"; };
+		C951AC8DEB311254A423D5263C4CA00A /* Pods-StepVision.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-StepVision.modulemap"; sourceTree = "<group>"; };
+		CEF223C29CC291C4F7CD7BEFF8018515 /* SCCameraKitPushToDeviceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCCameraKitPushToDeviceExtension.release.xcconfig; sourceTree = "<group>"; };
+		CEF30525A5FEA63E59FE305CCABB22D8 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D2D198EAC9F3868A955F93249F5617BC /* UserDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserDataProvider.swift; path = UserData/UserDataProvider.swift; sourceTree = "<group>"; };
+		D40D9D691D7F7A7DC40700497F70A394 /* Pods-StepVisionTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StepVisionTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D478634CC42087C847EB4920A93AE0D7 /* SCCameraKitReferenceSwiftUI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SCCameraKitReferenceSwiftUI-dummy.m"; sourceTree = "<group>"; };
+		D54392E25440DD5ACB7EE6828D8E0436 /* SCCameraKitPushToDeviceExtension-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "SCCameraKitPushToDeviceExtension-xcframeworks.sh"; sourceTree = "<group>"; };
+		D5639D2452712B20CC8681BD66273E26 /* SCCameraKitBaseExtension-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "SCCameraKitBaseExtension-xcframeworks.sh"; sourceTree = "<group>"; };
+		D707ACC240030AFAE008EDE9E363620D /* CameraActionsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraActionsView.swift; path = CameraUI/CameraControlStrip/CameraActionsView.swift; sourceTree = "<group>"; };
+		DA78AF60DDB3DFA4036D1AE4169C888C /* Pods-StepVisionTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StepVisionTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		DB4D99330E2471B23C114FDFB29790F0 /* SnapSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapSDK.debug.xcconfig; sourceTree = "<group>"; };
+		DC852BC801D9AAFC6103FF6176F13712 /* SCCameraKit-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "SCCameraKit-xcframeworks.sh"; sourceTree = "<group>"; };
+		E06D0F62DEB1CCAAF85155FC218B7B0C /* SCCameraKitReferenceUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCCameraKitReferenceUI.debug.xcconfig; sourceTree = "<group>"; };
+		E1A45F07E2F079AE5A95BACB4CC5B8AD /* ResourceBundle-CameraKitReferenceUI-SCCameraKitReferenceUI-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-CameraKitReferenceUI-SCCameraKitReferenceUI-Info.plist"; sourceTree = "<group>"; };
+		E2445D6C711BAE61021435DF8A7F7F2E /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E27C0FA5C0E49F063964BFE869D657B3 /* SCCameraKitReferenceSwiftUI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCCameraKitReferenceSwiftUI-umbrella.h"; sourceTree = "<group>"; };
+		E2FD0FCA5139AC1C7FCFEB0D8335D4A0 /* CarouselItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CarouselItem.swift; path = Carousel/CarouselItem.swift; sourceTree = "<group>"; };
+		E4080DCF121512F06F1188AB0195A384 /* SCCameraKitBaseExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCCameraKitBaseExtension.release.xcconfig; sourceTree = "<group>"; };
+		E472B6F29938AD4D6376A3825A83015F /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "ur-PK.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		E6C9EC8FC1B9EACBA8923F009C7FB6A2 /* PreviewView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		E8AB10F91C9CC48B801CD6B8682FEBA8 /* CameraView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraView.swift; path = CameraUI/CameraView.swift; sourceTree = "<group>"; };
+		E90358D8F861996915DAF2B84B38ED59 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E9A98D8FA08B6706955E6D212DF8A2E3 /* AdjustmentControlView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AdjustmentControlView.swift; path = CameraUI/CameraAdjustments/AdjustmentControlView.swift; sourceTree = "<group>"; };
+		E9BC6504EB90A56878DA7B9844661571 /* SCCameraKitReferenceUI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SCCameraKitReferenceUI.modulemap; sourceTree = "<group>"; };
+		EAB472F6810EB9E302B72070DB8A1A71 /* Pods-StepVision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StepVision.debug.xcconfig"; sourceTree = "<group>"; };
+		F1228EFF0E2A04DE78DE524D907A19E4 /* SCCameraKitReferenceSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCCameraKitReferenceSwiftUI.debug.xcconfig; sourceTree = "<group>"; };
+		F34D129D4B1F999058145EFD5A7D35C2 /* Recorder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Recorder.swift; path = Recorder/Recorder.swift; sourceTree = "<group>"; };
+		F8F6A75BD7CFB06CDE4F3C65E8494DA0 /* ControlSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ControlSlider.swift; path = CameraUI/CameraAdjustments/ControlSlider.swift; sourceTree = "<group>"; };
+		FA3FA9961A09079F5D18A28F86BD1B9F /* UIFont+SCTypography.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIFont+SCTypography.swift"; path = "Helper/UIFont+SCTypography.swift"; sourceTree = "<group>"; };
+		FA9C3E61FE30D31C8EF6BB8FFF6BBAB9 /* CarouselImageLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CarouselImageLoader.swift; path = Carousel/CarouselImageLoader.swift; sourceTree = "<group>"; };
+		FD1FF1629219CAA6676E35230AD1ECEF /* CameraButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraButton.swift; path = CameraButton/CameraButton.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0E799878903FFA5989184E802730F0A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17EAC4F3B5D2BEF52E81A33E04561CC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51E036D7BE96E970020D4D8346ED4878 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBD452D47FFAFD5DEA0A2E9EEE9C2336 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE84C05B61ACBD60003F9049EA0C63F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00D730E0276B255BFEC398F7E1CDE3B8 /* Pods-StepVisionTests */ = {
+			isa = PBXGroup;
+			children = (
+				D40D9D691D7F7A7DC40700497F70A394 /* Pods-StepVisionTests-acknowledgements.markdown */,
+				DA78AF60DDB3DFA4036D1AE4169C888C /* Pods-StepVisionTests-acknowledgements.plist */,
+				49AFF9C9E91E7707373F08F0CA123B64 /* Pods-StepVisionTests-dummy.m */,
+				02A6F652C149F4A9805CC43CF584AF08 /* Pods-StepVisionTests.debug.xcconfig */,
+				1BA094BEB3F01FC095852423607F0492 /* Pods-StepVisionTests.enterprise.xcconfig */,
+				BA8182D36D9847648F3EA9EE7C227C98 /* Pods-StepVisionTests.release.xcconfig */,
+			);
+			name = "Pods-StepVisionTests";
+			path = "Target Support Files/Pods-StepVisionTests";
+			sourceTree = "<group>";
+		};
+		03D72787AF6FB37DAD6AB29F5E3AAEF0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				768C6A9A2EDF7C58AF1A26952264854F /* SCSDKCoreKit.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0ABE7DF13C7DBEE9556BDA29EB0AF4B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				780D6F265B55212D9B778A9BF7A8AC6D /* Pods-StepVision */,
+				9C3495A6B6EDB3E61FE6D0C79A8FC02F /* Pods-StepVisionTests */,
+				B339B350138A7730C868E34A4D5496B0 /* SCCameraKitReferenceSwiftUI */,
+				3FFF165531D701ADA79D889A264C97A6 /* SCCameraKitReferenceUI */,
+				C8CDAA3523E28F6506A94A23AF63715E /* SCCameraKitReferenceUI-CameraKitReferenceUI */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		159AD8578EFA43DFEA81AC827D543063 /* SCCameraKitReferenceSwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				0FE28BD7C38795ED97E40BEBBCF3CA40 /* CameraButton.swift */,
+				8CDDC6CBFDF56F2A931F309B1EE3216B /* CameraView.swift */,
+				2D888F3C84B867CAA435A4DE5DB5EF0E /* CameraViewState.swift */,
+				2B66D920435AD1A750B629752D749BA4 /* CarouselView.swift */,
+				9F8C918E162FDC1CF5E4CD220FB29070 /* ImagePreviewView.swift */,
+				279D9B2E5225A5C128C964233F8E60C5 /* MediaPickerView.swift */,
+				E6C9EC8FC1B9EACBA8923F009C7FB6A2 /* PreviewView.swift */,
+				2F313B604FCD295AF43415E8C920FA13 /* VideoPreviewView.swift */,
+				FC9B9DA9DC55E32A1FA73D7A2C628DC7 /* Support Files */,
+			);
+			name = SCCameraKitReferenceSwiftUI;
+			path = SCCameraKitReferenceSwiftUI;
+			sourceTree = "<group>";
+		};
+		18896214AD69B02632EED0AE0DEF663F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				878270921D492C0AAE376C5113C1A7AD /* SCSDKCameraKitBaseExtension.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1FC750C2928F09CF02FCFF2DF1AE1BA9 /* SCSDKCreativeKit */ = {
+			isa = PBXGroup;
+			children = (
+				E87F586BC72DAFCEEC5B1B62BCE0F0B6 /* Frameworks */,
+			);
+			name = SCSDKCreativeKit;
+			sourceTree = "<group>";
+		};
+		232718BA0EA88D055108607C2D9B9D59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5EAE20B5FEC0011B94240DA58308E68 /* SCSDKCameraKitPushToDeviceExtension.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2382C7C5DC27B1ECC800FF9CDA165279 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1A45F07E2F079AE5A95BACB4CC5B8AD /* ResourceBundle-CameraKitReferenceUI-SCCameraKitReferenceUI-Info.plist */,
+				E9BC6504EB90A56878DA7B9844661571 /* SCCameraKitReferenceUI.modulemap */,
+				12A73A5FE8E1EB2976DDFF483F0163E2 /* SCCameraKitReferenceUI-dummy.m */,
+				82AB54C552D00A73AC49D2B2C3B4F89E /* SCCameraKitReferenceUI-prefix.pch */,
+				642B4ECC73D13FBECB39C37AC359330D /* SCCameraKitReferenceUI-umbrella.h */,
+				E06D0F62DEB1CCAAF85155FC218B7B0C /* SCCameraKitReferenceUI.debug.xcconfig */,
+				7F32F7BB13D220119319B8519791CD4C /* SCCameraKitReferenceUI.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SCCameraKitReferenceUI";
+			sourceTree = "<group>";
+		};
+		2DCED5486991497251C02724ED4F4EB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				037C05E6169DAF884E731E35F146AA2E /* SCSDKLoginKit.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		30DFDE8CA501A9D456BA3A6A3F682922 /* SCSDKLoginKit */ = {
+			isa = PBXGroup;
+			children = (
+				2DCED5486991497251C02724ED4F4EB4 /* Frameworks */,
+			);
+			name = SCSDKLoginKit;
+			sourceTree = "<group>";
+		};
+		38EB878A0573518F1BE3F79939690441 /* SCCameraKitReferenceUI */ = {
+			isa = PBXGroup;
+			children = (
+				E9A98D8FA08B6706955E6D212DF8A2E3 /* AdjustmentControlView.swift */,
+				2005939A5E0CD3E459FCD1135DD23EB3 /* BundleHelper.swift */,
+				5588F5E90898AEDD52257D4E7326C395 /* ButtonShadowHelper.swift */,
+				D707ACC240030AFAE008EDE9E363620D /* CameraActionsView.swift */,
+				B8B8192277E0B2CFC91FA2FAF0DF7F07 /* CameraBottomBar.swift */,
+				FD1FF1629219CAA6676E35230AD1ECEF /* CameraButton.swift */,
+				AF13DE674C1B38D0D5920E92FE005442 /* CameraConfigurableActionView.swift */,
+				AE132D4A2CD2D78DCE4B5E239C2FAA9C /* CameraController.swift */,
+				E8AB10F91C9CC48B801CD6B8682FEBA8 /* CameraView.swift */,
+				23FDCD8639BA9C2525457438ED61E1A3 /* CameraViewController.swift */,
+				36E1ED9962258BE308177020AD024B46 /* CarouselCollectionViewCell.swift */,
+				87E240316E323819D0EAD4DB870C4AD7 /* CarouselCollectionViewLayout.swift */,
+				FA9C3E61FE30D31C8EF6BB8FFF6BBAB9 /* CarouselImageLoader.swift */,
+				E2FD0FCA5139AC1C7FCFEB0D8335D4A0 /* CarouselItem.swift */,
+				B5BC78FF563F60100E343982BE705853 /* CarouselView.swift */,
+				1F26FE42303053689067A1D77EAED43A /* ControlDismissalHintHelper.swift */,
+				F8F6A75BD7CFB06CDE4F3C65E8494DA0 /* ControlSlider.swift */,
+				12D9A778173446C2BF90F1335F3A38C5 /* FlashControlView.swift */,
+				25C39D439E553637C98FF81E4FDA4A44 /* FlashModeSelectionView.swift */,
+				07F7852FE65FCC6694EF9CA9A943A8C5 /* ImageHighlightHelper.swift */,
+				1C34C8BFDA9233C55AC934D17837808E /* ImagePreviewViewController.swift */,
+				0EBAA2E876DAD9104806E120FCB8680E /* KeyboardInputAccessoryViewProvider.swift */,
+				43C8A0E950CE00AE3A1E8DFE07BD8695 /* LocalizedString.swift */,
+				6F3CDE2CB182D2A1C3DC2BC5715818F7 /* MediaPickerView.swift */,
+				57344773377D4305D77195E9088F7067 /* MediaPickerViewCell.swift */,
+				96AEADE5EA58CE6BDEB2BA20DF9E82A1 /* MediaPickerViewLoadingFooter.swift */,
+				79F92B22AE49389D1D1BA9A0D1C05111 /* MessageNotificationView.swift */,
+				4754039D7CF642CB0AA65620ABE4BBDC /* OutputSizeHelper.swift */,
+				13B1455B77AABE19D9AA83BFEEF5890C /* PreviewViewController.swift */,
+				F34D129D4B1F999058145EFD5A7D35C2 /* Recorder.swift */,
+				8C1DB8614918C0A327E2581D5E794F93 /* RingLightColorSelectionView.swift */,
+				56F00D68FF68A218C7158D3636775836 /* RingLightColorSelectionViewCell.swift */,
+				2F2428028F7E577529E7B9CCC9FE0640 /* RingLightGradientView.swift */,
+				75F476247241F4D993A04CD76E558D7A /* RingLightView.swift */,
+				29BF179D963BAD4106996B789FAA8315 /* SnapAttributionView.swift */,
+				8EEB27F2458CDF5D792195D2D6B638D5 /* Snapchat.swift */,
+				41CCA261A20E851F10BAA2D3E4398116 /* TapAnimationView.swift */,
+				916EBDCF7309F9372F9FF9D9E8CAAE4B /* Testable.swift */,
+				03945ECF7D6F6ABA15E65AF93AE2487A /* UIColor+Hex.swift */,
+				FA3FA9961A09079F5D18A28F86BD1B9F /* UIFont+SCTypography.swift */,
+				310929DBF00D012BB95E3BE709406C94 /* UITapGestureRecognizer+AVCaptureDevice.swift */,
+				D2D198EAC9F3868A955F93249F5617BC /* UserDataProvider.swift */,
+				B64A777FD7E0C1DE94A5D35E0F84FC3A /* VideoPreviewViewController.swift */,
+				93B403129496279C482980548C79E1C9 /* Resources */,
+				2382C7C5DC27B1ECC800FF9CDA165279 /* Support Files */,
+			);
+			name = SCCameraKitReferenceUI;
+			path = SCCameraKitReferenceUI;
+			sourceTree = "<group>";
+		};
+		3F1A2EE4887AD4CCB9700FE2D1940D04 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC852BC801D9AAFC6103FF6176F13712 /* SCCameraKit-xcframeworks.sh */,
+				7F0E9E74EB498EC6AA8891582630DF9A /* SCCameraKit.debug.xcconfig */,
+				4213C6E259C1C34D25E5E6223336131E /* SCCameraKit.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SCCameraKit";
+			sourceTree = "<group>";
+		};
+		42077C600A622CB3A20D7FD3E9333E49 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE5D756E10FC6173068E01FCDF537141 /* SCCameraKit */,
+				A029C53AC56168525F10CEF8B166FB76 /* SCCameraKitBaseExtension */,
+				D748949C11BFD3CE6797DD8F5AA27832 /* SCCameraKitLoginKitAuth */,
+				B77C928738DE4D9284A5C876EC24751E /* SCCameraKitPushToDeviceExtension */,
+				159AD8578EFA43DFEA81AC827D543063 /* SCCameraKitReferenceSwiftUI */,
+				38EB878A0573518F1BE3F79939690441 /* SCCameraKitReferenceUI */,
+				4CAC215A10F938615FE063420A8BD7D0 /* SnapSDK */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4CAC215A10F938615FE063420A8BD7D0 /* SnapSDK */ = {
+			isa = PBXGroup;
+			children = (
+				62FFB0C32AB0F5CE71CF15C8DAC43861 /* SCSDKCoreKit */,
+				1FC750C2928F09CF02FCFF2DF1AE1BA9 /* SCSDKCreativeKit */,
+				30DFDE8CA501A9D456BA3A6A3F682922 /* SCSDKLoginKit */,
+				C4D621753714F929355753DCCEFF111E /* Support Files */,
+			);
+			name = SnapSDK;
+			path = SnapSDK;
+			sourceTree = "<group>";
+		};
+		5316658483B33D17B5540349521873AB /* Pods-StepVision */ = {
+			isa = PBXGroup;
+			children = (
+				C951AC8DEB311254A423D5263C4CA00A /* Pods-StepVision.modulemap */,
+				975E9984912683BF4B996B021F79188A /* Pods-StepVision-acknowledgements.markdown */,
+				1BBE1FB578F708935D52F4F4D8BD4E5A /* Pods-StepVision-acknowledgements.plist */,
+				52C1474163309E1264A2F066D2C1CAC3 /* Pods-StepVision-dummy.m */,
+				7509689A3237A2DEC24E02B4D6E189BD /* Pods-StepVision-frameworks.sh */,
+				75849846C4523D1BDA3EC3A1EBE009D4 /* Pods-StepVision-resources.sh */,
+				217BDD061BD09DE13812D189BC96AA8F /* Pods-StepVision-umbrella.h */,
+				EAB472F6810EB9E302B72070DB8A1A71 /* Pods-StepVision.debug.xcconfig */,
+				7A3F669F8991576D0C9AF5465EC3B941 /* Pods-StepVision.enterprise.xcconfig */,
+				B53E2FE23F52DFC4911A97EBF81B8258 /* Pods-StepVision.release.xcconfig */,
+			);
+			name = "Pods-StepVision";
+			path = "Target Support Files/Pods-StepVision";
+			sourceTree = "<group>";
+		};
+		5CECAA3A5FB3346C2404F864254E18C4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D54392E25440DD5ACB7EE6828D8E0436 /* SCCameraKitPushToDeviceExtension-xcframeworks.sh */,
+				51E36900F4AE44A0FCFF45ED4FFB9EC0 /* SCCameraKitPushToDeviceExtension.debug.xcconfig */,
+				CEF223C29CC291C4F7CD7BEFF8018515 /* SCCameraKitPushToDeviceExtension.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SCCameraKitPushToDeviceExtension";
+			sourceTree = "<group>";
+		};
+		62FFB0C32AB0F5CE71CF15C8DAC43861 /* SCSDKCoreKit */ = {
+			isa = PBXGroup;
+			children = (
+				03D72787AF6FB37DAD6AB29F5E3AAEF0 /* Frameworks */,
+			);
+			name = SCSDKCoreKit;
+			sourceTree = "<group>";
+		};
+		661193E20FC524A3241C3BF4C204EBB1 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5316658483B33D17B5540349521873AB /* Pods-StepVision */,
+				00D730E0276B255BFEC398F7E1CDE3B8 /* Pods-StepVisionTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		838D959E80DCAF1046F905C31F59AEC2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				65DE31E07444159984B97457962E5F16 /* SCCameraKitLoginKitAuth-xcframeworks.sh */,
+				C90B1746A8F45A7CA0C69E9066ED13D9 /* SCCameraKitLoginKitAuth.debug.xcconfig */,
+				7C535210D48F11DE7D9BADD3FD37B95B /* SCCameraKitLoginKitAuth.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SCCameraKitLoginKitAuth";
+			sourceTree = "<group>";
+		};
+		93B403129496279C482980548C79E1C9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7C9B25E9545C6D86EE6440C8BFFBB800 /* Localizable.strings */,
+				62C9841632E1CA58174572C74AAFF65D /* Reference.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A029C53AC56168525F10CEF8B166FB76 /* SCCameraKitBaseExtension */ = {
+			isa = PBXGroup;
+			children = (
+				18896214AD69B02632EED0AE0DEF663F /* Frameworks */,
+				B44791C910FBA8B4AB781708EA7CF0CD /* Support Files */,
+			);
+			name = SCCameraKitBaseExtension;
+			path = SCCameraKitBaseExtension;
+			sourceTree = "<group>";
+		};
+		B44791C910FBA8B4AB781708EA7CF0CD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D5639D2452712B20CC8681BD66273E26 /* SCCameraKitBaseExtension-xcframeworks.sh */,
+				22D1173CC59D48239E12CD88B76284C7 /* SCCameraKitBaseExtension.debug.xcconfig */,
+				E4080DCF121512F06F1188AB0195A384 /* SCCameraKitBaseExtension.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SCCameraKitBaseExtension";
+			sourceTree = "<group>";
+		};
+		B77C928738DE4D9284A5C876EC24751E /* SCCameraKitPushToDeviceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				232718BA0EA88D055108607C2D9B9D59 /* Frameworks */,
+				5CECAA3A5FB3346C2404F864254E18C4 /* Support Files */,
+			);
+			name = SCCameraKitPushToDeviceExtension;
+			path = SCCameraKitPushToDeviceExtension;
+			sourceTree = "<group>";
+		};
+		C4D621753714F929355753DCCEFF111E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5EE6BE3EF76E9319C924CCF561F09A7C /* SnapSDK-xcframeworks.sh */,
+				DB4D99330E2471B23C114FDFB29790F0 /* SnapSDK.debug.xcconfig */,
+				15A7F5F754536D0846871DCA17C557D3 /* SnapSDK.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SnapSDK";
+			sourceTree = "<group>";
+		};
+		C52B2C4705FE5D292B9EFC4F4F56CDEC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EDDCF81E45E410D578E8C8E2661FEC4 /* SCSDKCameraKit.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				42077C600A622CB3A20D7FD3E9333E49 /* Pods */,
+				0ABE7DF13C7DBEE9556BDA29EB0AF4B5 /* Products */,
+				661193E20FC524A3241C3BF4C204EBB1 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D748949C11BFD3CE6797DD8F5AA27832 /* SCCameraKitLoginKitAuth */ = {
+			isa = PBXGroup;
+			children = (
+				E86B912B60218B7E28A1EB80E0BBF665 /* Frameworks */,
+				838D959E80DCAF1046F905C31F59AEC2 /* Support Files */,
+			);
+			name = SCCameraKitLoginKitAuth;
+			path = SCCameraKitLoginKitAuth;
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE5D756E10FC6173068E01FCDF537141 /* SCCameraKit */ = {
+			isa = PBXGroup;
+			children = (
+				C52B2C4705FE5D292B9EFC4F4F56CDEC /* Frameworks */,
+				3F1A2EE4887AD4CCB9700FE2D1940D04 /* Support Files */,
+			);
+			name = SCCameraKit;
+			path = SCCameraKit;
+			sourceTree = "<group>";
+		};
+		E86B912B60218B7E28A1EB80E0BBF665 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C19A34CABD315645FBD9633B4B5F30E /* SCSDKCameraKitLoginKitAuth.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E87F586BC72DAFCEEC5B1B62BCE0F0B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C362E7127BEAF43864CF0D0BD4ED411E /* SCSDKCreativeKit.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC9B9DA9DC55E32A1FA73D7A2C628DC7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B06220F948DC65C55CF755E6D6DFB764 /* SCCameraKitReferenceSwiftUI.modulemap */,
+				D478634CC42087C847EB4920A93AE0D7 /* SCCameraKitReferenceSwiftUI-dummy.m */,
+				8A8C0634CE9CDB1258FB4FF60D905F69 /* SCCameraKitReferenceSwiftUI-prefix.pch */,
+				E27C0FA5C0E49F063964BFE869D657B3 /* SCCameraKitReferenceSwiftUI-umbrella.h */,
+				F1228EFF0E2A04DE78DE524D907A19E4 /* SCCameraKitReferenceSwiftUI.debug.xcconfig */,
+				10FB150273042B1BEDB5656040C976EC /* SCCameraKitReferenceSwiftUI.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SCCameraKitReferenceSwiftUI";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3706FC3D3CEB43A6DF62904A641A55E5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8BE640F5574DBA2C355B483FA78AF87 /* SCCameraKitReferenceSwiftUI-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DA3D3DEBA8B6F88D16A2D9F235D2FCC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1634123DED7E99B1C798511701BB51B1 /* Pods-StepVision-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94BE1A06B71426BAA9CE3C9A495D102C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				080A3F5467B48DB9F2B9F260A26BED1E /* SCCameraKitReferenceUI-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFEBC6B991B9E956AEEB9672377D624A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		247D0F326E39A4020425524A8D634509 /* SCCameraKitReferenceUI-CameraKitReferenceUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91B1FFEC14C7B3F5FAB33C96CB65400E /* Build configuration list for PBXNativeTarget "SCCameraKitReferenceUI-CameraKitReferenceUI" */;
+			buildPhases = (
+				9024DBA450BFA426DD831B11B3B0C617 /* Sources */,
+				0E799878903FFA5989184E802730F0A1 /* Frameworks */,
+				2B33AB20859B5518E28644B74EA130A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SCCameraKitReferenceUI-CameraKitReferenceUI";
+			productName = CameraKitReferenceUI;
+			productReference = C8CDAA3523E28F6506A94A23AF63715E /* SCCameraKitReferenceUI-CameraKitReferenceUI */;
+			productType = "com.apple.product-type.bundle";
+		};
+		302A0BA936FB32AFF970FC23F72BDEAA /* SCCameraKitReferenceUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65CA166279CD879256949BED6CC709C7 /* Build configuration list for PBXNativeTarget "SCCameraKitReferenceUI" */;
+			buildPhases = (
+				94BE1A06B71426BAA9CE3C9A495D102C /* Headers */,
+				C8261B4C39DF3CE3C79D02F51E62E5FB /* Sources */,
+				51E036D7BE96E970020D4D8346ED4878 /* Frameworks */,
+				CCA71D5AA1B112BAAAD136C3CF2CFAC7 /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				232C4315A5A35CA3500CEEF3E7D33B66 /* PBXTargetDependency */,
+				79574D05AD4BA0C7482978147FB69683 /* PBXTargetDependency */,
+			);
+			name = SCCameraKitReferenceUI;
+			productName = SCCameraKitReferenceUI;
+			productReference = 3FFF165531D701ADA79D889A264C97A6 /* SCCameraKitReferenceUI */;
+			productType = "com.apple.product-type.library.static";
+		};
+		30C48E594ABD4D560DD3A2989646442B /* Pods-StepVisionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8643ABF8EB4E8EE735F1F7C682881FA2 /* Build configuration list for PBXNativeTarget "Pods-StepVisionTests" */;
+			buildPhases = (
+				EFEBC6B991B9E956AEEB9672377D624A /* Headers */,
+				F249CE3C9ECE8952771EF956A271C027 /* Sources */,
+				17EAC4F3B5D2BEF52E81A33E04561CC6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3F61CDFAD9C5661AA1DFFC55B7D3974 /* PBXTargetDependency */,
+			);
+			name = "Pods-StepVisionTests";
+			productName = "Pods-StepVisionTests";
+			productReference = 9C3495A6B6EDB3E61FE6D0C79A8FC02F /* Pods-StepVisionTests */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C6BBDF4054BCBA12E1061365DA250F88 /* Pods-StepVision */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F2E9151FB5F9171BD74080F823D76CC /* Build configuration list for PBXNativeTarget "Pods-StepVision" */;
+			buildPhases = (
+				3DA3D3DEBA8B6F88D16A2D9F235D2FCC /* Headers */,
+				797461044306F722CFCAAD38076C30C5 /* Sources */,
+				CBD452D47FFAFD5DEA0A2E9EEE9C2336 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F85F9B9344ED77718A69B657412E96F /* PBXTargetDependency */,
+				40CDB9EBEE2C3321383C8DAACF5BFBC3 /* PBXTargetDependency */,
+				0A730C90FE08446D6E908430946581DA /* PBXTargetDependency */,
+				6FD0FB92E8E03C43D77A85F589E388D2 /* PBXTargetDependency */,
+				4A9132A6858C8BFACA048B57B3242DD8 /* PBXTargetDependency */,
+				FF836BB59D486A1A1892F5C8EEEDEB7A /* PBXTargetDependency */,
+				8BB52A604B71C5C561701206E9796C14 /* PBXTargetDependency */,
+			);
+			name = "Pods-StepVision";
+			productName = "Pods-StepVision";
+			productReference = 780D6F265B55212D9B778A9BF7A8AC6D /* Pods-StepVision */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F2ABA7142F8FE3685F104DD72C19A07A /* SCCameraKitReferenceSwiftUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C96FDEAD69786668BAD2D519451F4AA /* Build configuration list for PBXNativeTarget "SCCameraKitReferenceSwiftUI" */;
+			buildPhases = (
+				3706FC3D3CEB43A6DF62904A641A55E5 /* Headers */,
+				3571D71C1127EA824881A806EF0616CC /* Sources */,
+				DE84C05B61ACBD60003F9049EA0C63F7 /* Frameworks */,
+				C8A45D0C38B82A5590535EFEA2F61E54 /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8FA0770E76F9E2FC2D2FAE596A690084 /* PBXTargetDependency */,
+			);
+			name = SCCameraKitReferenceSwiftUI;
+			productName = SCCameraKitReferenceSwiftUI;
+			productReference = B339B350138A7730C868E34A4D5496B0 /* SCCameraKitReferenceSwiftUI */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				ar,
+				"bn-BD",
+				"bn-IN",
+				da,
+				de,
+				el,
+				en,
+				"en-GB",
+				es,
+				"es-AR",
+				"es-ES",
+				"es-MX",
+				fi,
+				"fil-PH",
+				fr,
+				"gu-IN",
+				"hi-IN",
+				id,
+				it,
+				ja,
+				"kn-IN",
+				ko,
+				"ml-IN",
+				"mr-IN",
+				"ms-MY",
+				nb,
+				nl,
+				"pa-IN",
+				pl,
+				pt,
+				"pt-PT",
+				ro,
+				ru,
+				sv,
+				"ta-IN",
+				"te-IN",
+				"th-TH",
+				tr,
+				"ur-PK",
+				"vi-VN",
+				"zh-Hans",
+				"zh-Hant",
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 0ABE7DF13C7DBEE9556BDA29EB0AF4B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C6BBDF4054BCBA12E1061365DA250F88 /* Pods-StepVision */,
+				30C48E594ABD4D560DD3A2989646442B /* Pods-StepVisionTests */,
+				FAC495339E6C2D0F78A4D5A22BC1A537 /* SCCameraKit */,
+				F6A52FAA4585E09FD564FFBB4059866C /* SCCameraKitBaseExtension */,
+				E447E7758C18A389A6216559CE9ED4D4 /* SCCameraKitLoginKitAuth */,
+				8C9A244C135E7D44CFF747DA42FD606C /* SCCameraKitPushToDeviceExtension */,
+				F2ABA7142F8FE3685F104DD72C19A07A /* SCCameraKitReferenceSwiftUI */,
+				302A0BA936FB32AFF970FC23F72BDEAA /* SCCameraKitReferenceUI */,
+				247D0F326E39A4020425524A8D634509 /* SCCameraKitReferenceUI-CameraKitReferenceUI */,
+				DC460828FF0F2F76C86CA020169EDB5F /* SnapSDK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B33AB20859B5518E28644B74EA130A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0AB7B73E3181F01CF3864D0CA539D83 /* Localizable.strings in Resources */,
+				8164E004FDF4611A9202099BB71A081F /* Reference.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5A0C20262687781A43D2093EAD0E19C4 /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/SCCameraKitLoginKitAuth/SCCameraKitLoginKitAuth-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/SCCameraKitLoginKitAuth/SCCameraKitLoginKitAuth-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/SCCameraKitLoginKitAuth/SCCameraKitLoginKitAuth-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F2133FE2F4CC95E0C6F3E90D8DBCAB8 /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/SCCameraKitBaseExtension/SCCameraKitBaseExtension-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/SCCameraKitBaseExtension/SCCameraKitBaseExtension-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/SCCameraKitBaseExtension/SCCameraKitBaseExtension-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A32E20D6E59E2533F4716C101A8BCF6 /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/SCCameraKitPushToDeviceExtension/SCCameraKitPushToDeviceExtension-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/SCCameraKitPushToDeviceExtension/SCCameraKitPushToDeviceExtension-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/SCCameraKitPushToDeviceExtension/SCCameraKitPushToDeviceExtension-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF49CF01C76B86B11BD85A7837EB545C /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/SCCameraKit/SCCameraKit-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/SCCameraKit/SCCameraKit-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/SCCameraKit/SCCameraKit-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8A45D0C38B82A5590535EFEA2F61E54 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/SCSDKCameraKitReferenceSwiftUI/SCCameraKitReferenceSwiftUI.modulemap",
+				"${PODS_ROOT}/Headers/Public/SCSDKCameraKitReferenceSwiftUI/SCCameraKitReferenceSwiftUI-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/SCCameraKitReferenceSwiftUI-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SCSDKCameraKitReferenceSwiftUI/SCCameraKitReferenceSwiftUI.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SCSDKCameraKitReferenceSwiftUI/SCCameraKitReferenceSwiftUI-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
+		CB3E12B93B171AD0B116E20FE0AEFCB1 /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/SnapSDK/SnapSDK-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/SnapSDK/SnapSDK-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/SnapSDK/SnapSDK-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCA71D5AA1B112BAAAD136C3CF2CFAC7 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/SCSDKCameraKitReferenceUI/SCCameraKitReferenceUI.modulemap",
+				"${PODS_ROOT}/Headers/Public/SCSDKCameraKitReferenceUI/SCCameraKitReferenceUI-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/SCCameraKitReferenceUI-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SCSDKCameraKitReferenceUI/SCCameraKitReferenceUI.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SCSDKCameraKitReferenceUI/SCCameraKitReferenceUI-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3571D71C1127EA824881A806EF0616CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBB7EA398F2AC544EB6EFD57E93D0EA2 /* CameraButton.swift in Sources */,
+				B2BFBA0FE47C29B76DE0D120F08492BA /* CameraView.swift in Sources */,
+				E88DE2A8E8F32ADDD612E0C34A8D26A9 /* CameraViewState.swift in Sources */,
+				BB99C1F9C804D9D44FF500E0FB910776 /* CarouselView.swift in Sources */,
+				47811FF6961F0B4AF6A53B2BD469F187 /* ImagePreviewView.swift in Sources */,
+				5943D7E76C7CAE4A762D286BB65A54C9 /* MediaPickerView.swift in Sources */,
+				B457EDC32DB1F85F73770A1BE469D3D4 /* PreviewView.swift in Sources */,
+				7D1C8D8460D5522D82A389163AAEC6F2 /* SCCameraKitReferenceSwiftUI-dummy.m in Sources */,
+				76EFF081A08BAF727FF1B032437D657E /* VideoPreviewView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		797461044306F722CFCAAD38076C30C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0CE9558B1900A1D1286600C5C0E386B /* Pods-StepVision-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9024DBA450BFA426DD831B11B3B0C617 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8261B4C39DF3CE3C79D02F51E62E5FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED62C71ED35427A209FE0ABEA07B39F9 /* AdjustmentControlView.swift in Sources */,
+				A90548278312043011A51844086BD053 /* BundleHelper.swift in Sources */,
+				8CD6E9EEC7E11604A7731F7786D22FE7 /* ButtonShadowHelper.swift in Sources */,
+				2929677D21C956A4C0A90C7E90163112 /* CameraActionsView.swift in Sources */,
+				CEA7440DF14A5ACDA3965F3CA8B98683 /* CameraBottomBar.swift in Sources */,
+				4BE57F3373F1D9E39F86F1263F76F8D8 /* CameraButton.swift in Sources */,
+				C5541267ACE984B28615DD1909DEFC26 /* CameraConfigurableActionView.swift in Sources */,
+				575807216656105E2097AD0BD7581862 /* CameraController.swift in Sources */,
+				14413924B8B8C6FC922239213AFADAE6 /* CameraView.swift in Sources */,
+				E7B0141DFDDD0F968DD71621B48539C7 /* CameraViewController.swift in Sources */,
+				843BE372E62876C788BD72E7D4F31DC9 /* CarouselCollectionViewCell.swift in Sources */,
+				14329682F30CF1D30648648AC987EB25 /* CarouselCollectionViewLayout.swift in Sources */,
+				6A931ACE61E6ED338B244338D4D306BE /* CarouselImageLoader.swift in Sources */,
+				4D2A1D0EE2D506A4309CA18AE24A5CFD /* CarouselItem.swift in Sources */,
+				7927C9A4F9E3AF6DAC1181E8D3CC0640 /* CarouselView.swift in Sources */,
+				5AA4A00E9D2F5C5A8D78B02C6CB81DB7 /* ControlDismissalHintHelper.swift in Sources */,
+				0E8DD8546F32A84D9706816E402D8300 /* ControlSlider.swift in Sources */,
+				5E547B35409CAE57668CBBE7A20920A5 /* FlashControlView.swift in Sources */,
+				48F3F5B1CF680B7A4923E85D64771031 /* FlashModeSelectionView.swift in Sources */,
+				93065EB2CA5A8A02E2E953DF09F21262 /* ImageHighlightHelper.swift in Sources */,
+				4C1F7ED7E4AA93ABF8BABB5BFCD2C3E1 /* ImagePreviewViewController.swift in Sources */,
+				5737CC2804F5FD13BA6C31A9C424BE12 /* KeyboardInputAccessoryViewProvider.swift in Sources */,
+				D53905CBA277C4313BE2A252D138CB60 /* LocalizedString.swift in Sources */,
+				0702DE1E0580DEC69374F50BA44A8641 /* MediaPickerView.swift in Sources */,
+				1D92596F59D10C1365EBD2F992281D43 /* MediaPickerViewCell.swift in Sources */,
+				BEFE49E47A88DE2BA468ED1BBCBC30FF /* MediaPickerViewLoadingFooter.swift in Sources */,
+				C222F175FDAD49D16E5323652248665C /* MessageNotificationView.swift in Sources */,
+				BBCD624A9BC2D99CDA376766810FE680 /* OutputSizeHelper.swift in Sources */,
+				8AFF4A79FEB21F4122B05A7C02709B9C /* PreviewViewController.swift in Sources */,
+				AB982314A1256C62581589A72A82F874 /* Recorder.swift in Sources */,
+				F3FF1868EDF21B54492666503394389D /* RingLightColorSelectionView.swift in Sources */,
+				92B7F65E2E4D75221D006E3B3472BC27 /* RingLightColorSelectionViewCell.swift in Sources */,
+				0DDC09A788B985421CFBC6A1EE610CBD /* RingLightGradientView.swift in Sources */,
+				2A21E624F6FE4150861FD25429D461CE /* RingLightView.swift in Sources */,
+				20E54D8B811622A514943C40F71C0D08 /* SCCameraKitReferenceUI-dummy.m in Sources */,
+				B079FB2C871FFAA3C51F234EE4A5C51B /* SnapAttributionView.swift in Sources */,
+				98D0D8A88FBC5CA391B4E5EDA8D0C179 /* Snapchat.swift in Sources */,
+				0907AA138B7BE8C19A89B49F476D3AC2 /* TapAnimationView.swift in Sources */,
+				190EE5640B61A6AC881039BE677BEA85 /* Testable.swift in Sources */,
+				DFC4A0CF3934341F3B31A72674E198AA /* UIColor+Hex.swift in Sources */,
+				DAF115B7C645CF13CA98A5DAEE13914F /* UIFont+SCTypography.swift in Sources */,
+				1B52186CA87829B5B2DBCEE3C4D78921 /* UITapGestureRecognizer+AVCaptureDevice.swift in Sources */,
+				DF5538FE14C2457234B5B1EE42B285D8 /* UserDataProvider.swift in Sources */,
+				C56347B8F132E8DF1089805126C5E069 /* VideoPreviewViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F249CE3C9ECE8952771EF956A271C027 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35310D74DCEC7BD319E969D6BAC8F006 /* Pods-StepVisionTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		06C2672219E2C8AA017E613B5DDD61BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SCCameraKit;
+			target = FAC495339E6C2D0F78A4D5A22BC1A537 /* SCCameraKit */;
+			targetProxy = 1EC0CC93F4B638EAD0D70325A423610F /* PBXContainerItemProxy */;
+		};
+		0A730C90FE08446D6E908430946581DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SCCameraKitLoginKitAuth;
+			target = E447E7758C18A389A6216559CE9ED4D4 /* SCCameraKitLoginKitAuth */;
+			targetProxy = C9DB7DD37E3EAB707DBDA3F54D632C31 /* PBXContainerItemProxy */;
+		};
+		232C4315A5A35CA3500CEEF3E7D33B66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SCCameraKit;
+			target = FAC495339E6C2D0F78A4D5A22BC1A537 /* SCCameraKit */;
+			targetProxy = BD71EFFF2254F9B6951FFD8CCF7C78A4 /* PBXContainerItemProxy */;
+		};
+		3F85F9B9344ED77718A69B657412E96F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SCCameraKit;
+			target = FAC495339E6C2D0F78A4D5A22BC1A537 /* SCCameraKit */;
+			targetProxy = DAFDAC395E49586DA8D9855276B335A6 /* PBXContainerItemProxy */;
+		};
+		40CDB9EBEE2C3321383C8DAACF5BFBC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SCCameraKitBaseExtension;
+			target = F6A52FAA4585E09FD564FFBB4059866C /* SCCameraKitBaseExtension */;
+			targetProxy = 343AB495E467F25BCD94010EC48AA44B /* PBXContainerItemProxy */;
+		};
+		4A9132A6858C8BFACA048B57B3242DD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SCCameraKitReferenceSwiftUI;
+			target = F2ABA7142F8FE3685F104DD72C19A07A /* SCCameraKitReferenceSwiftUI */;
+			targetProxy = 54635AD3CE021091343CB0A040700A74 /* PBXContainerItemProxy */;
+		};
+		6FD0FB92E8E03C43D77A85F589E388D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SCCameraKitPushToDeviceExtension;
+			target = 8C9A244C135E7D44CFF747DA42FD606C /* SCCameraKitPushToDeviceExtension */;
+			targetProxy = 1F8C411DFD4F63F63CE6786AB6AEFBD2 /* PBXContainerItemProxy */;
+		};
+		79574D05AD4BA0C7482978147FB69683 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SCCameraKitReferenceUI-CameraKitReferenceUI";
+			target = 247D0F326E39A4020425524A8D634509 /* SCCameraKitReferenceUI-CameraKitReferenceUI */;
+			targetProxy = 7993DDBC4ADEC63581D5E48A5C31451B /* PBXContainerItemProxy */;
+		};
+		8BB52A604B71C5C561701206E9796C14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SnapSDK;
+			target = DC460828FF0F2F76C86CA020169EDB5F /* SnapSDK */;
+			targetProxy = ED3C18D03E11A6C1F94BDD32E514DA58 /* PBXContainerItemProxy */;
+		};
+		8FA0770E76F9E2FC2D2FAE596A690084 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SCCameraKitReferenceUI;
+			target = 302A0BA936FB32AFF970FC23F72BDEAA /* SCCameraKitReferenceUI */;
+			targetProxy = C84634B86F913C56CB97811F4EB3B500 /* PBXContainerItemProxy */;
+		};
+		C3F61CDFAD9C5661AA1DFFC55B7D3974 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-StepVision";
+			target = C6BBDF4054BCBA12E1061365DA250F88 /* Pods-StepVision */;
+			targetProxy = D73F2F8A9065FD4493EB2FEDF3EBE116 /* PBXContainerItemProxy */;
+		};
+		C752F28D76D3E7F3A312E5F1536B692F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SnapSDK;
+			target = DC460828FF0F2F76C86CA020169EDB5F /* SnapSDK */;
+			targetProxy = 4C3A4676ACA08C985A3B6F58B4ECE901 /* PBXContainerItemProxy */;
+		};
+		D15D98BA9D9CF4905F9863C0B370AE1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SCCameraKit;
+			target = FAC495339E6C2D0F78A4D5A22BC1A537 /* SCCameraKit */;
+			targetProxy = C785E54BF091815110AF0BDF168262CA /* PBXContainerItemProxy */;
+		};
+		D446E66E06BD0CACED4B2CA8791F522D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SCCameraKitBaseExtension;
+			target = F6A52FAA4585E09FD564FFBB4059866C /* SCCameraKitBaseExtension */;
+			targetProxy = C7C5A7167B0F93DE5692DDCFE57FF5FA /* PBXContainerItemProxy */;
+		};
+		FF836BB59D486A1A1892F5C8EEEDEB7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SCCameraKitReferenceUI;
+			target = 302A0BA936FB32AFF970FC23F72BDEAA /* SCCameraKitReferenceUI */;
+			targetProxy = 8AD2AC002A2A9A03B33B8C977B43FD86 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7C9B25E9545C6D86EE6440C8BFFBB800 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3183A6A3EB6415E35BEBB163523DEEA3 /* Localizable.strings */,
+				AB5ED8F1B35F0E968640BC016440C58E /* Localizable.strings */,
+				AD64E6550F2C5E5F28F1C21CA5D0985C /* Localizable.strings */,
+				8D91F3FA8DEBF58BB2512C1768B8BD61 /* Localizable.strings */,
+				5AA5575A024742601E723E6CE6171A42 /* Localizable.strings */,
+				3B101C9F7D6D6C83AC05D589746D7C56 /* Localizable.strings */,
+				5EF7021C367AC973A21029845CEF2352 /* Localizable.strings */,
+				40B348EF7B05B242E73422786D54EFAF /* Localizable.strings */,
+				9F7E1756417D26E088C565A8D8FB7961 /* Localizable.strings */,
+				21E785307B243B2B8DCCF8B83B1849F8 /* Localizable.strings */,
+				3A5098439219D49E4FEF32403F23375F /* Localizable.strings */,
+				30F7B8F920F9DF60A914B6255A217ED0 /* Localizable.strings */,
+				670B3F98DE4321CF6C63DA03412CFB25 /* Localizable.strings */,
+				09484C32C0B64E8FB4E20011DA595B85 /* Localizable.strings */,
+				E90358D8F861996915DAF2B84B38ED59 /* Localizable.strings */,
+				9113AE9B506F130FEC2F80B28553947F /* Localizable.strings */,
+				32C94CF01790AD0E6A33831AAE5DE97F /* Localizable.strings */,
+				2171F8E935B126BC6473C471F88BE4A5 /* Localizable.strings */,
+				8D49534FA8A33512A9419AAB969CB445 /* Localizable.strings */,
+				CEF30525A5FEA63E59FE305CCABB22D8 /* Localizable.strings */,
+				8326F55540695DC736A89F06507B8FBE /* Localizable.strings */,
+				A1D5A2A9637F051C84247F9AAE53D51D /* Localizable.strings */,
+				B091C0ED073BFE097F9991D69639DD5A /* Localizable.strings */,
+				9D1EFF150B066D5973DEEE248F0AE1A1 /* Localizable.strings */,
+				4B9D861BE6D18F42524A5DA70E8F71AF /* Localizable.strings */,
+				6575879C32AEA826027BBE620D2A966F /* Localizable.strings */,
+				4D908B8852FE48766BEAEFBB23381DC3 /* Localizable.strings */,
+				79DB805EC66914DEBD00CAE31D97435B /* Localizable.strings */,
+				0601FEA6EA7DA378301855CC78D2650B /* Localizable.strings */,
+				6C437E37EAA2EB0B304C9B2BA6FD7073 /* Localizable.strings */,
+				91F275323EE35648C65B2421F243AAAC /* Localizable.strings */,
+				E2445D6C711BAE61021435DF8A7F7F2E /* Localizable.strings */,
+				BBC8A94F1472E0F88C40F484C989A6C4 /* Localizable.strings */,
+				0C5B536EA73F02CF949D9190F14DFA55 /* Localizable.strings */,
+				2C4012838F4206D93FEBE9BE5F7DE944 /* Localizable.strings */,
+				62E2ECC44377A44805612AD12D7AF64E /* Localizable.strings */,
+				AD348A041F6B9B7E8349D0DAA0160572 /* Localizable.strings */,
+				95724BD896FA6CABF840C00683B8521A /* Localizable.strings */,
+				E472B6F29938AD4D6376A3825A83015F /* Localizable.strings */,
+				C1823E7C959878D0C888C54DB0D0425D /* Localizable.strings */,
+				247AB113F373E57C1F9BB964A54E6CAD /* Localizable.strings */,
+				2CE51AD312EBFC1BE27138BDBDADB16E /* Localizable.strings */,
+			);
+			name = Localizable.strings;
+			path = Resources/Strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0F76C9963C181A80C249672FA961E3F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4213C6E259C1C34D25E5E6223336131E /* SCCameraKit.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		187CAA71260EEACFCFB23D153AC94432 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B53E2FE23F52DFC4911A97EBF81B8258 /* Pods-StepVision.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-StepVision/Pods-StepVision.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2919D558566D3BF279E1E4F2DD635718 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB4D99330E2471B23C114FDFB29790F0 /* SnapSDK.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B9E26EAE2CD392AD762421F663075A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		39CA9161473E37C9D389F3391C62D9FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15A7F5F754536D0846871DCA17C557D3 /* SnapSDK.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4C8331F00361AFE6987362D5496D55E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51E36900F4AE44A0FCFF45ED4FFB9EC0 /* SCCameraKitPushToDeviceExtension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6069C78447E324A1CB952CDF47272CAD /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C535210D48F11DE7D9BADD3FD37B95B /* SCCameraKitLoginKitAuth.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Enterprise;
+		};
+		625D4C5FBB8CCFFC6AE55D0A473354E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F32F7BB13D220119319B8519791CD4C /* SCCameraKitReferenceUI.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SCCameraKitReferenceUI";
+				IBSC_MODULE = SCSDKCameraKitReferenceUI;
+				INFOPLIST_FILE = "Target Support Files/SCCameraKitReferenceUI/ResourceBundle-CameraKitReferenceUI-SCCameraKitReferenceUI-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = CameraKitReferenceUI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		64778A5AB21848AECD0C32337DB4CE07 /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F32F7BB13D220119319B8519791CD4C /* SCCameraKitReferenceUI.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SCCameraKitReferenceUI";
+				IBSC_MODULE = SCSDKCameraKitReferenceUI;
+				INFOPLIST_FILE = "Target Support Files/SCCameraKitReferenceUI/ResourceBundle-CameraKitReferenceUI-SCCameraKitReferenceUI-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = CameraKitReferenceUI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Enterprise;
+		};
+		709F6D89F0D2FAC0F2159ECC49938FAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1228EFF0E2A04DE78DE524D907A19E4 /* SCCameraKitReferenceSwiftUI.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SCCameraKitReferenceSwiftUI/SCCameraKitReferenceSwiftUI-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MODULEMAP_FILE = Headers/Public/SCSDKCameraKitReferenceSwiftUI/SCCameraKitReferenceSwiftUI.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SCSDKCameraKitReferenceSwiftUI;
+				PRODUCT_NAME = SCCameraKitReferenceSwiftUI;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7A336AFD7049A23ABE6088D252C73CDC /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A3F669F8991576D0C9AF5465EC3B941 /* Pods-StepVision.enterprise.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-StepVision/Pods-StepVision.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Enterprise;
+		};
+		7A4A1A3B5F4CEC7E5A604489D9E53639 /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BA094BEB3F01FC095852423607F0492 /* Pods-StepVisionTests.enterprise.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Enterprise;
+		};
+		7FD02AA53C6167227438C3F81C3F5561 /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10FB150273042B1BEDB5656040C976EC /* SCCameraKitReferenceSwiftUI.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SCCameraKitReferenceSwiftUI/SCCameraKitReferenceSwiftUI-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MODULEMAP_FILE = Headers/Public/SCSDKCameraKitReferenceSwiftUI/SCCameraKitReferenceSwiftUI.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SCSDKCameraKitReferenceSwiftUI;
+				PRODUCT_NAME = SCCameraKitReferenceSwiftUI;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Enterprise;
+		};
+		803931498F641431CD58E02E5DCB2387 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAB472F6810EB9E302B72070DB8A1A71 /* Pods-StepVision.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-StepVision/Pods-StepVision.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8640671C807A81FD2DDDED6D36F24A34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02A6F652C149F4A9805CC43CF584AF08 /* Pods-StepVisionTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8719AB03FB5EF483CEA0778A60410E19 /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4080DCF121512F06F1188AB0195A384 /* SCCameraKitBaseExtension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Enterprise;
+		};
+		878D6077AF04A017AB03C6B44666A9F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E06D0F62DEB1CCAAF85155FC218B7B0C /* SCCameraKitReferenceUI.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SCCameraKitReferenceUI/SCCameraKitReferenceUI-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MODULEMAP_FILE = Headers/Public/SCSDKCameraKitReferenceUI/SCCameraKitReferenceUI.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SCSDKCameraKitReferenceUI;
+				PRODUCT_NAME = SCCameraKitReferenceUI;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		87E09E7C22C7680AF74E34AAD55F8945 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10FB150273042B1BEDB5656040C976EC /* SCCameraKitReferenceSwiftUI.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SCCameraKitReferenceSwiftUI/SCCameraKitReferenceSwiftUI-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MODULEMAP_FILE = Headers/Public/SCSDKCameraKitReferenceSwiftUI/SCCameraKitReferenceSwiftUI.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SCSDKCameraKitReferenceSwiftUI;
+				PRODUCT_NAME = SCCameraKitReferenceSwiftUI;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8E059FAB1F93190C55E01D9DE716E30B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C90B1746A8F45A7CA0C69E9066ED13D9 /* SCCameraKitLoginKitAuth.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		943A51B5A68C29645157F4BB5E78DCD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F0E9E74EB498EC6AA8891582630DF9A /* SCCameraKit.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9D65CAD959EF131C0FAA2E3C40B31E69 /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15A7F5F754536D0846871DCA17C557D3 /* SnapSDK.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Enterprise;
+		};
+		9F038AE214446C5FA51F203FBC8DDB63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22D1173CC59D48239E12CD88B76284C7 /* SCCameraKitBaseExtension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9F808FEEEB51C3F8A5CF61D4CCAF82DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4080DCF121512F06F1188AB0195A384 /* SCCameraKitBaseExtension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AD201EA4F679B9D2FAD58C7C40EB774F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E06D0F62DEB1CCAAF85155FC218B7B0C /* SCCameraKitReferenceUI.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SCCameraKitReferenceUI";
+				IBSC_MODULE = SCSDKCameraKitReferenceUI;
+				INFOPLIST_FILE = "Target Support Files/SCCameraKitReferenceUI/ResourceBundle-CameraKitReferenceUI-SCCameraKitReferenceUI-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = CameraKitReferenceUI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		AEF59EAAAC2F841F5E2D1314414EE785 /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_ENTERPRISE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Enterprise;
+		};
+		B6E457A78CFD3F557D1FB0FF55B292FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEF223C29CC291C4F7CD7BEFF8018515 /* SCCameraKitPushToDeviceExtension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D146046D98FA4B3D26CE8BA59EFF6F81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F32F7BB13D220119319B8519791CD4C /* SCCameraKitReferenceUI.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SCCameraKitReferenceUI/SCCameraKitReferenceUI-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MODULEMAP_FILE = Headers/Public/SCSDKCameraKitReferenceUI/SCCameraKitReferenceUI.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SCSDKCameraKitReferenceUI;
+				PRODUCT_NAME = SCCameraKitReferenceUI;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E0A90844AAFD2D1F3F70302A191DFB09 /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEF223C29CC291C4F7CD7BEFF8018515 /* SCCameraKitPushToDeviceExtension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Enterprise;
+		};
+		E2D8C1E6791C88A63355547D8B045F41 /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F32F7BB13D220119319B8519791CD4C /* SCCameraKitReferenceUI.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SCCameraKitReferenceUI/SCCameraKitReferenceUI-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MODULEMAP_FILE = Headers/Public/SCSDKCameraKitReferenceUI/SCCameraKitReferenceUI.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SCSDKCameraKitReferenceUI;
+				PRODUCT_NAME = SCCameraKitReferenceUI;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Enterprise;
+		};
+		F3E41C411106D7DC8D602339253AAD92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C535210D48F11DE7D9BADD3FD37B95B /* SCCameraKitLoginKitAuth.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FE15C457D8F22FB2C9FAD95994E84B7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA8182D36D9847648F3EA9EE7C227C98 /* Pods-StepVisionTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF8E57ED5EA3024D4A1FEC1C0E9A141E /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4213C6E259C1C34D25E5E6223336131E /* SCCameraKit.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Enterprise;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1EA7E6B993839DCFAF0039BA2A61A860 /* Build configuration list for PBXAggregateTarget "SCCameraKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				943A51B5A68C29645157F4BB5E78DCD6 /* Debug */,
+				FF8E57ED5EA3024D4A1FEC1C0E9A141E /* Enterprise */,
+				0F76C9963C181A80C249672FA961E3F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B9E26EAE2CD392AD762421F663075A1 /* Debug */,
+				AEF59EAAAC2F841F5E2D1314414EE785 /* Enterprise */,
+				63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B34A1B2E09AEE9608C1EAE377BC3038 /* Build configuration list for PBXAggregateTarget "SnapSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2919D558566D3BF279E1E4F2DD635718 /* Debug */,
+				9D65CAD959EF131C0FAA2E3C40B31E69 /* Enterprise */,
+				39CA9161473E37C9D389F3391C62D9FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F2E9151FB5F9171BD74080F823D76CC /* Build configuration list for PBXNativeTarget "Pods-StepVision" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				803931498F641431CD58E02E5DCB2387 /* Debug */,
+				7A336AFD7049A23ABE6088D252C73CDC /* Enterprise */,
+				187CAA71260EEACFCFB23D153AC94432 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6542EA9C6268E966ADFB057DC06D4D50 /* Build configuration list for PBXAggregateTarget "SCCameraKitLoginKitAuth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E059FAB1F93190C55E01D9DE716E30B /* Debug */,
+				6069C78447E324A1CB952CDF47272CAD /* Enterprise */,
+				F3E41C411106D7DC8D602339253AAD92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65CA166279CD879256949BED6CC709C7 /* Build configuration list for PBXNativeTarget "SCCameraKitReferenceUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				878D6077AF04A017AB03C6B44666A9F7 /* Debug */,
+				E2D8C1E6791C88A63355547D8B045F41 /* Enterprise */,
+				D146046D98FA4B3D26CE8BA59EFF6F81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C96FDEAD69786668BAD2D519451F4AA /* Build configuration list for PBXNativeTarget "SCCameraKitReferenceSwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				709F6D89F0D2FAC0F2159ECC49938FAA /* Debug */,
+				7FD02AA53C6167227438C3F81C3F5561 /* Enterprise */,
+				87E09E7C22C7680AF74E34AAD55F8945 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		765A56A207707D4168C3A21E27653BB4 /* Build configuration list for PBXAggregateTarget "SCCameraKitPushToDeviceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C8331F00361AFE6987362D5496D55E7 /* Debug */,
+				E0A90844AAFD2D1F3F70302A191DFB09 /* Enterprise */,
+				B6E457A78CFD3F557D1FB0FF55B292FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8643ABF8EB4E8EE735F1F7C682881FA2 /* Build configuration list for PBXNativeTarget "Pods-StepVisionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8640671C807A81FD2DDDED6D36F24A34 /* Debug */,
+				7A4A1A3B5F4CEC7E5A604489D9E53639 /* Enterprise */,
+				FE15C457D8F22FB2C9FAD95994E84B7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91B1FFEC14C7B3F5FAB33C96CB65400E /* Build configuration list for PBXNativeTarget "SCCameraKitReferenceUI-CameraKitReferenceUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD201EA4F679B9D2FAD58C7C40EB774F /* Debug */,
+				64778A5AB21848AECD0C32337DB4CE07 /* Enterprise */,
+				625D4C5FBB8CCFFC6AE55D0A473354E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D16A29461D483A4A9E5B27CA9B482CE3 /* Build configuration list for PBXAggregateTarget "SCCameraKitBaseExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F038AE214446C5FA51F203FBC8DDB63 /* Debug */,
+				8719AB03FB5EF483CEA0778A60410E19 /* Enterprise */,
+				9F808FEEEB51C3F8A5CF61D4CCAF82DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

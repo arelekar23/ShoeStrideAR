@@ -1,0 +1,8 @@
+
+framework module SCSDKCameraKitBaseExtension {
+  umbrella header "SCSDKCameraKitBaseExtension.h"
+
+  export *
+  module * { export * }
+}
+

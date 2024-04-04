@@ -1,0 +1,8 @@
+
+framework module SCSDKCameraKitLoginKitAuth {
+  umbrella header "SCSDKCameraKitLoginKitAuth.h"
+
+  export *
+  module * { export * }
+}
+
