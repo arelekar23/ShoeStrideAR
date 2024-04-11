@@ -1,0 +1,8 @@
+${PODS_ROOT}/Target Support Files/Pods-StepVision/Pods-StepVision-frameworks.sh
+${PODS_XCFRAMEWORKS_BUILD_DIR}/SCCameraKit/SCSDKCameraKit.framework/SCSDKCameraKit
+${PODS_XCFRAMEWORKS_BUILD_DIR}/SCCameraKitBaseExtension/SCSDKCameraKitBaseExtension.framework/SCSDKCameraKitBaseExtension
+${PODS_XCFRAMEWORKS_BUILD_DIR}/SCCameraKitLoginKitAuth/SCSDKCameraKitLoginKitAuth.framework/SCSDKCameraKitLoginKitAuth
+${PODS_XCFRAMEWORKS_BUILD_DIR}/SCCameraKitPushToDeviceExtension/SCSDKCameraKitPushToDeviceExtension.framework/SCSDKCameraKitPushToDeviceExtension
+${PODS_XCFRAMEWORKS_BUILD_DIR}/SnapSDK/SCSDKCoreKit/SCSDKCoreKit.framework/SCSDKCoreKit
+${PODS_XCFRAMEWORKS_BUILD_DIR}/SnapSDK/SCSDKCreativeKit/SCSDKCreativeKit.framework/SCSDKCreativeKit
+${PODS_XCFRAMEWORKS_BUILD_DIR}/SnapSDK/SCSDKLoginKit/SCSDKLoginKit.framework/SCSDKLoginKit

@@ -1,0 +1,6 @@
+module Pods_StepVision {
+  umbrella header "Pods-StepVision-umbrella.h"
+
+  export *
+  module * { export * }
+}
