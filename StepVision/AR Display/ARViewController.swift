@@ -1,3 +1,11 @@
+//
+//  MainViewController.swift
+//  CameraKitSample
+//
+//  Created by Adwait Relekar on 4/3/24.
+//  Copyright © 2024 Snap. All rights reserved.
+//
+
 import UIKit
 import SCSDKCameraKit
 import SCSDKCameraKitReferenceUI
@@ -5,29 +13,25 @@ import SCSDKCreativeKit
 #if CAMERAKIT_PUSHTODEVICE
     import SCSDKLoginKit
 #endif
-// Reenable if using SwiftUI reference UI
-//import SCSDKCameraKitReferenceSwiftUI
-//import SwiftUI
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, SnapchatDelegate {
-
-    var window: UIWindow?
-    
+class ARViewController: UIViewController, SnapchatDelegate, AppOrientationDelegate {
+  
     private enum Constants {
         static let partnerGroupId = "b6f8aaeb-05f4-4c87-9973-a2fdd343258b"
     }
+
+    var window: UIWindow?
     fileprivate var supportedOrientations: UIInterfaceOrientationMask = .allButUpsideDown
 
     let snapAPI = SCSDKSnapAPI()
-    
-    lazy var cameraController = {
+    lazy var cameraController: CustomizedCameraController = {
         if let token = debugStore?.apiToken {
             return CustomizedCameraController(sessionConfig: SessionConfig(apiToken: token))
         } else {
             return CustomizedCameraController()
         }
     }()
+
     private let debugStore: (any DebugStoreProtocol)? = {
         if #available(iOS 13, *) {
             return DebugStore(defaultGroupIDs: [SCCameraKitLensRepositoryBundledGroup, Constants.partnerGroupId])
@@ -35,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SnapchatDelegate {
             return nil
         }
     }()
-    
+
     func cameraKitViewController(_ viewController: UIViewController, openSnapchat screen: SnapchatScreen) {
         switch screen {
         case .profile, .lens(_):
@@ -54,17 +58,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SnapchatDelegate {
 
     private func sendSnapContent(_ content: SCSDKSnapContent, viewController: UIViewController) {
         viewController.view.isUserInteractionEnabled = false
-        snapAPI.startSending(content) { error in
-            DispatchQueue.main.async {
-                viewController.view.isUserInteractionEnabled = true
-            }
-            if let error = error {
-                print("Failed to send content to Snapchat with error: \(error.localizedDescription)")
-                return
+        
+        DispatchQueue.global().async { [weak self] in
+            // Perform AVCaptureSession operations on a background thread
+            self?.snapAPI.startSending(content) { error in
+                DispatchQueue.main.async {
+                    viewController.view.isUserInteractionEnabled = true
+                }
+                if let error = error {
+                    print("Failed to send content to Snapchat with error: \(error.localizedDescription)")
+                    return
+                }
             }
         }
     }
-    
+
+
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
         return supportedOrientations
     }
@@ -77,8 +86,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SnapchatDelegate {
 #endif
     }
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        window = UIWindow(frame: UIScreen.main.bounds)
+    var cameraViewController: CameraViewController?
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if let previousGroupIDs = debugStore?.groupIDs {
+            cameraController.groupIDs = previousGroupIDs
+        } else {
+            cameraController.groupIDs = [SCCameraKitLensRepositoryBundledGroup, Constants.partnerGroupId]
+        }
+        
+        cameraController.snapchatDelegate = self
+        cameraViewController = CustomizedCameraViewController(cameraController: cameraController, debugStore: debugStore)
+        cameraViewController?.appOrientationDelegate = self
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    
+
+    @IBAction func openCamera(_ sender: UIButton) {
 //        if let previousGroupIDs = debugStore?.groupIDs {
 //            cameraController.groupIDs = previousGroupIDs
 //        } else {
@@ -87,15 +113,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SnapchatDelegate {
 //        cameraController.snapchatDelegate = self
 //        let cameraViewController = CustomizedCameraViewController(cameraController: cameraController, debugStore: debugStore)
 //        cameraViewController.appOrientationDelegate = self
-//        window?.rootViewController = cameraViewController
-//        window?.makeKeyAndVisible()
-        return true
+//
+//        present(cameraViewController, animated: true, completion: nil)
+        DispatchQueue.global().async { [weak self] in
+                // Execute AVCaptureSession operations on a background thread
+                self?.startCaptureSession()
+            }
     }
-}
-
-
-extension AppDelegate: AppOrientationDelegate {
-
+    
+    private func startCaptureSession() {
+        // Ensure cameraController is properly initialized
+//        let cameraViewController = CustomizedCameraViewController(cameraController: cameraController, debugStore: debugStore)
+//        cameraViewController.appOrientationDelegate = self
+        DispatchQueue.main.async {
+            self.navigationController?.pushViewController(self.cameraViewController!, animated: true)
+//            self.present(self.cameraViewController!, animated: true, completion: nil)
+        }
+        
+        
+    }
+    
+    
     func lockOrientation(_ orientation: UIInterfaceOrientationMask) {
         supportedOrientations = orientation
     }
@@ -105,3 +143,4 @@ extension AppDelegate: AppOrientationDelegate {
     }
 
 }
+
