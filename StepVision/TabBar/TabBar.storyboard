@@ -11,36 +11,36 @@
         <scene sceneID="qOf-1y-Hnv">
             <objects>
                 <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="HomeVC" id="YRy-CV-yke" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="house.fill" catalog="system" id="WBk-Ve-doh"/>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="house" catalog="system" id="uLM-z8-XNM"/>
+                    <navigationItem key="navigationItem" id="sC7-QZ-yS7"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8AC-ml-Zqt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="327" y="-108"/>
+            <point key="canvasLocation" x="130" y="-95"/>
         </scene>
         <!--ProfileVC-->
         <scene sceneID="mVo-Fi-4qC">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="ProfileVC" storyboardName="Profile" referencedIdentifier="ProfileVC" id="JFR-ax-Bjx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="person.crop.circle.fill" catalog="system" id="d5U-wj-zp0"/>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="person.crop.circle.fill" catalog="system" id="dIV-Oq-YT4"/>
+                    <navigationItem key="navigationItem" id="5kL-CC-7ym"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7cY-NP-dxI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1118" y="-108"/>
+            <point key="canvasLocation" x="1213" y="-95"/>
         </scene>
-        <!--TabBar-->
+        <!--Tab Bar Controller-->
         <scene sceneID="dqg-Qo-IeR">
             <objects>
-                <tabBarController storyboardIdentifier="TabBar" title="TabBar" automaticallyAdjustsScrollViewInsets="NO" id="LyW-oD-neL" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBar" modalPresentationStyle="fullScreen" id="LyW-oD-neL" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GNQ-97-WoM">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="0.0" height="0.0"/>
+                    <tabBar key="tabBar" contentMode="bottom" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="GNQ-97-WoM">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
-                    <connections>
-                        <segue destination="YRy-CV-yke" kind="relationship" relationship="viewControllers" id="R29-k2-QJW"/>
-                        <segue destination="JFR-ax-Bjx" kind="relationship" relationship="viewControllers" id="m3a-cj-F1K"/>
-                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MBF-ZI-uRB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -48,7 +48,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="house" catalog="system" width="128" height="104"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
     </resources>
 </document>

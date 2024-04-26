@@ -16,6 +16,8 @@ import SCSDKCreativeKit
 
 class ShoeDetailsVC: UIViewController, SnapchatDelegate, AppOrientationDelegate {
 
+    let firestoreApi = FirestoreAPIManager.shared
+    
     private enum Constants {
         static let partnerGroupId = "b6f8aaeb-05f4-4c87-9973-a2fdd343258b"
     }
@@ -89,9 +91,7 @@ class ShoeDetailsVC: UIViewController, SnapchatDelegate, AppOrientationDelegate 
     var cameraViewController: CameraViewController?
     
     var shoe: Shoes?
-    var imageName: String?
-
-  
+    
     @IBOutlet var detailsView: UIView!
     @IBOutlet var brand: UILabel!
     @IBOutlet var name: UILabel!
@@ -138,6 +138,20 @@ class ShoeDetailsVC: UIViewController, SnapchatDelegate, AppOrientationDelegate 
 
     }
  
+    @IBAction func addToCart(_ sender: UIButton) {
+        firestoreApi.addToCart(shoes: shoe!, quantity: 1) { result, success in
+            switch result {
+            case .success:
+                // Show alert on successful addition
+                let alert = UIAlertController(title: "Success", message: "Shoes added to cart.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            case .failure(let error):
+                // Handle error, if any
+                print("Error: \(error.localizedDescription)")
+            }
+        }
+    }
     @IBAction func openCamera(_ sender: UIButton) {
         DispatchQueue.global().async { [weak self] in
                 // Execute AVCaptureSession operations on a background thread
@@ -194,7 +208,7 @@ class ShoeDetailsVC: UIViewController, SnapchatDelegate, AppOrientationDelegate 
             price.text = "Price not available"
         }
         brand.text = shoe?.brand
-        shoeImage.image = UIImage(named: imageName!)
+        shoeImage.image = UIImage(named: shoe!.image)
         shoeDescription.text = shoe?.description
     }
     

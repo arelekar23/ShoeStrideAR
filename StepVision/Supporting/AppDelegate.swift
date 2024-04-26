@@ -9,6 +9,7 @@ import Firebase
 // Reenable if using SwiftUI reference UI
 //import SCSDKCameraKitReferenceSwiftUI
 //import SwiftUI
+import Stripe
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, SnapchatDelegate {
@@ -79,6 +80,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SnapchatDelegate {
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        StripeAPI.defaultPublishableKey = "pk_test_51P8k87GLazoYQkr6Lz5mJeDLFocOsVtsLdpgaDofGRTRQyQY2tybGLGnyzCQyKLwNz74OqMQaCxTBmkNpRshjNRP00n7ilAm31"
         FirebaseApp.configure()
         
 //        do {
