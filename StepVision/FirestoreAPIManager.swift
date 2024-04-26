@@ -96,6 +96,27 @@ class FirestoreAPIManager {
         }
     }
     
+    func removeAllItemsFromCart(completion: @escaping (Result<Void, Error>, Bool) -> Void) {
+        let db = Firestore.firestore()
+        let userCollection = db.collection("users")
+        
+        guard let currentUser = Auth.auth().currentUser else {
+            let error = NSError(domain: "Auth", code: -1, userInfo: [NSLocalizedDescriptionKey: "No logged-in user."])
+            completion(.failure(error), false)
+            return
+        }
+        
+        let userDocument = userCollection.document(currentUser.uid)
+        userDocument.updateData(["cart": FieldValue.delete()]) { error in
+            if let error = error {
+                completion(.failure(error), false)
+                return
+            }
+            completion(.success(()), true)
+        }
+    }
+
+    
     func removeFromCart(shoes: Shoes, completion: @escaping (Result<Void, Error>, Bool) -> Void) {
         let db = Firestore.firestore()
         let userCollection = db.collection("users")

@@ -8,6 +8,7 @@
 
 import UIKit
 import StripePaymentSheet
+import FirebaseAuth
 
 class CartViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -30,7 +31,6 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         totalView.layer.shadowOffset = CGSize(width: 0, height: 2)
         totalView.layer.shadowRadius = 5
         totalView.layer.cornerRadius = 20
-//        apiCall()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -42,28 +42,53 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     @IBAction func placeOrderTapped(_ sender: UIButton) {
         paymentSheet?.present(from: self) { paymentResult in
-            // MARK: Handle the payment result
-            print(paymentResult)
-            print("inside button present sheet")
             switch paymentResult {
             case .completed:
-                self.placeOrderButton.isEnabled = true
-                let alertController = UIAlertController(title: "Order Successful", message: "Your order has been successfully placed.", preferredStyle: .alert)
-                        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                        alertController.addAction(okAction)
-                        self.present(alertController, animated: true, completion: nil)
-                print("Your order is confirmed")
+                self.cartItems.removeAll()
+                self.fetchProducts()
+                self.updateEmptyCartMessage()
+                self.tableView.reloadData()
+                self.updateTotalPrice()
+                self.handleOrderCompletion()
             case .canceled:
-                print("Canceled!")
+                self.handleOrderCancellation()
             case .failed(let error):
-                print("Payment failed: \(error)")
+                self.handleOrderFailure(error: error)
             }
         }
     }
     
+    func handleOrderCompletion() {
+        self.placeOrderButton.isEnabled = false
+        self.emptyCart()
+        let alertController = UIAlertController(title: "Order Successful", message: "Your order has been successfully placed.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+        print("Your order is confirmed")
+    }
+
+    func handleOrderCancellation() {
+        print("Canceled!")
+        let alertController = UIAlertController(title: "Order Unsuccessful", message: "Your order failed.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+        print("Your order is cancelled")
+    }
+
+    func handleOrderFailure(error: Error) {
+        print("Payment failed: \(error)")
+        let alertController = UIAlertController(title: "Order Fail", message: "Your order failed.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+        print("Your order is Failed")
+    }
     
     func apiCall() {
-        let cartContent: [String: Int?] = ["amount": finalPrice!*100]
+        var userEmail = Auth.auth().currentUser?.email
+        let cartContent: [String: Any?] = ["amount": finalPrice!*100, "email": userEmail]
         var request = URLRequest(url: backendCheckoutUrl)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -85,8 +110,6 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
             var configuration = PaymentSheet.Configuration()
             configuration.merchantDisplayName = "ShoeStride.Inc"
             configuration.customer = .init(id: customerId, ephemeralKeySecret: customerEphemeralKeySecret)
-            // Set `allowsDelayedPaymentMethods` to true if your business handles
-            // delayed notification payment methods like US bank accounts.
             configuration.allowsDelayedPaymentMethods = true
             self.paymentSheet = PaymentSheet(paymentIntentClientSecret: paymentIntentClientSecret, configuration: configuration)
             DispatchQueue.main.async {
@@ -112,32 +135,30 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
         }
     }
-    
-//    func updateTotalPrice() {
-//        finalPrice = 0.0
-//        
-//        for item in cartItems {
-//            finalPrice! += item.shoe.retailPrice * Double(item.quantity)
-//        }
-//        
-//        self.totalPrice.text = String(format: "$%.2f", finalPrice!)
-//    }
+    func emptyCart(){
+        firestoreApi.removeAllItemsFromCart { [weak self] result, success in
+            guard let self = self else { return }
+            switch result {
+            case .success():
+                self.cartItems = []
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            case .failure(_):
+                print("Error empltying cart")
+            }
+        }
+    }
 
     func updateTotalPrice() {
         finalPrice = 0
-        // Iterate through cartItems and sum up the prices multiplied by their quantities
         for cartItem in cartItems {
             finalPrice! += Int(cartItem.shoe.retailPrice) * cartItem.quantity
         }
-        
         self.totalPrice.text = "$ " + String(Double(finalPrice!))
     }
 
-    
-    // MARK: - Table view data source
-
     func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return cartItems.isEmpty ? 0 : cartItems.count
     }
 
