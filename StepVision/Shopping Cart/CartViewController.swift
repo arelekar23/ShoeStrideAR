@@ -63,12 +63,11 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     
     func apiCall() {
-        var components = URLComponents(url: backendCheckoutUrl, resolvingAgainstBaseURL: false)!
-        // Convert the integer amount to a string before assigning it to the query parameter value
-        let amount = finalPrice
-        components.queryItems = [URLQueryItem(name: "amount", value: "\(amount)")]
+        let cartContent: [String: Int?] = ["amount": finalPrice!*100]
         var request = URLRequest(url: backendCheckoutUrl)
         request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = try? JSONSerialization.data(withJSONObject: cartContent)
         let task = URLSession.shared.dataTask(with: request, completionHandler: { [weak self] (data, response, error) in
             guard let data = data,
                   let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any],
@@ -84,7 +83,7 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
             STPAPIClient.shared.publishableKey = publishableKey
             // MARK: Create a PaymentSheet instance
             var configuration = PaymentSheet.Configuration()
-            configuration.merchantDisplayName = "Example, Inc."
+            configuration.merchantDisplayName = "ShoeStride.Inc"
             configuration.customer = .init(id: customerId, ephemeralKeySecret: customerEphemeralKeySecret)
             // Set `allowsDelayedPaymentMethods` to true if your business handles
             // delayed notification payment methods like US bank accounts.
@@ -125,9 +124,13 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
 //    }
 
     func updateTotalPrice() {
-        finalPrice = Int(cartItems.reduce(0.0) { $0 + ($1.shoe.retailPrice * Double($1.quantity)) })
-        let doublePrice = cartItems.reduce(0.0) { $0 + ($1.shoe.retailPrice * Double($1.quantity)) }
-        self.totalPrice.text = String(format: "$%.2f", doublePrice)
+        finalPrice = 0
+        // Iterate through cartItems and sum up the prices multiplied by their quantities
+        for cartItem in cartItems {
+            finalPrice! += Int(cartItem.shoe.retailPrice) * cartItem.quantity
+        }
+        
+        self.totalPrice.text = "$ " + String(Double(finalPrice!))
     }
 
     
