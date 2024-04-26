@@ -18,8 +18,6 @@ class HomeVC:  UIViewController, UISearchBarDelegate {
     
     @IBOutlet var cellContentView: UIView!
     
-    
-    let firestore = AuthService.shared
     let firestoreApi = FirestoreAPIManager.shared
     var shoes: [Shoes] = []
     var filteredShoes: [Shoes] = []
@@ -43,6 +41,14 @@ class HomeVC:  UIViewController, UISearchBarDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         fetchProducts()
+    }
+    
+    @IBAction func cartButtonTapped(_ sender: UIButton) {
+//        performSegue(withIdentifier: "ToProfileVC", sender: nil)
+    }
+    
+    @IBAction func profileButtonTapped(_ sender: UIButton) {
+//        performSegue(withIdentifier: "ToProfileVC", sender: nil)
     }
     
     func fetchProducts() {
@@ -92,7 +98,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
         let shoe = isSearching ? filteredShoes[indexPath.item] : shoes[indexPath.item]
-        cell.setup(with: ShoeCell(label: shoe.shoeName, price: shoe.retailPrice, image: UIImage(named: shoe.image) ?? UIImage(), description: shoe.description))
+        cell.setup(with: ShoeCell(label: shoe.shoeName, price: shoe.retailPrice, image: UIImage(named: shoe.image) ?? UIImage(), description: shoe.description, quantity: 1))
         return cell
     }
     
@@ -121,7 +127,6 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
                // Pass the selected shoe label to the next view controller
                if let shoeDetailsVC = segue.destination as? ShoeDetailsVC {
                    shoeDetailsVC.shoe = selectedShoe
-                   shoeDetailsVC.imageName = "shoe\(indexPath.item + 1)"
                }
            }
        }

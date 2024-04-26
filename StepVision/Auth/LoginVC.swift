@@ -18,6 +18,7 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         logo.layer.cornerRadius = 50
+        
     }
     
     @IBAction func signInTapped(_ sender: UIButton) {
@@ -30,10 +31,36 @@ class LoginVC: UIViewController {
                     print("Sign-In failed with error: \(error.localizedDescription)")
                 } else {
                     // Sign-in successful
-                    self.performSegue(withIdentifier: "ToHomeVC", sender: self)
+                    self.navigateToHomeScreen()
+//                    self.performSegue(withIdentifier: "ToHomeVC", sender: self)
                     print("Sign-in successful")
                 }
             }
+    }
+    
+    func navigateToHomeScreen() {
+        // Instantiate the storyboard containing the tab bar controller
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        
+        // Instantiate the tab bar controller
+        let viewController = storyboard.instantiateViewController(withIdentifier: "HomeVC") 
+        
+        // Wrap the tab bar controller within a navigation controller
+        let navigationController = UINavigationController(rootViewController: viewController)
+        
+//        // Assuming the home view controller is the first view controller in the tab bar controller's viewControllers array
+//        if let homeViewController = tabBarController.viewControllers?.first as? HomeVC {
+//            // Set the selected view controller of the tab bar controller to the home view controller
+//            tabBarController.selectedViewController = homeViewController
+//        }
+        
+        // Present the navigation controller
+        navigationController.modalPresentationStyle = .fullScreen
+        
+        // Set the navigation controller as the root view controller
+        if let window = UIApplication.shared.windows.first {
+            window.rootViewController = navigationController
+        }
     }
     @IBAction func newUserTapped(_ sender: UIButton) {
     }

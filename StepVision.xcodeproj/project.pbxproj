@@ -43,6 +43,12 @@
 		48A8E5D62BC62095001A308A /* SplineContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A8E5D52BC62095001A308A /* SplineContentView.swift */; };
 		48A8E5D92BC6803F001A308A /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48A8E5D82BC6803F001A308A /* Signup.storyboard */; };
 		48A8E5DB2BC68187001A308A /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48A8E5DA2BC68187001A308A /* TabBar.storyboard */; };
+		48EAD5772BDA576F006AA783 /* Temp Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EAD5762BDA576F006AA783 /* Temp Storyboard.storyboard */; };
+		48EAD57C2BDA5B8D006AA783 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EAD57B2BDA5B8D006AA783 /* CartTableViewCell.swift */; };
+		48EAD57E2BDA6C2A006AA783 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EAD57D2BDA6C2A006AA783 /* CartViewController.swift */; };
+		48EAD5852BDBF70A006AA783 /* StripePaymentSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 48EAD5842BDBF70A006AA783 /* StripePaymentSheet */; };
+		48EAD5872BDBF860006AA783 /* TempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EAD5862BDBF860006AA783 /* TempViewController.swift */; };
+		48EAD5892BDC3669006AA783 /* Stripe in Frameworks */ = {isa = PBXBuildFile; productRef = 48EAD5882BDC3669006AA783 /* Stripe */; };
 		5093DB202943E2A40092D8F2 /* CustomizedCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5093DB1F2943E2A40092D8F2 /* CustomizedCameraViewController.swift */; };
 		50F8ED132A032D2800430FAF /* DebugStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F8ED122A032D2800430FAF /* DebugStore.swift */; };
 		50F8ED152A0334F300430FAF /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F8ED142A0334F300430FAF /* DebugView.swift */; };
@@ -114,6 +120,10 @@
 		48A8E5D52BC62095001A308A /* SplineContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplineContentView.swift; sourceTree = "<group>"; };
 		48A8E5D82BC6803F001A308A /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 		48A8E5DA2BC68187001A308A /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		48EAD5762BDA576F006AA783 /* Temp Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Temp Storyboard.storyboard"; sourceTree = "<group>"; };
+		48EAD57B2BDA5B8D006AA783 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		48EAD57D2BDA6C2A006AA783 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		48EAD5862BDBF860006AA783 /* TempViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempViewController.swift; sourceTree = "<group>"; };
 		5093DB1F2943E2A40092D8F2 /* CustomizedCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizedCameraViewController.swift; sourceTree = "<group>"; };
 		50F8ED122A032D2800430FAF /* DebugStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugStore.swift; sourceTree = "<group>"; };
 		50F8ED142A0334F300430FAF /* DebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugView.swift; sourceTree = "<group>"; };
@@ -142,6 +152,8 @@
 				48067B022BC8892D004426C3 /* FirebaseFirestore in Frameworks */,
 				48067AFE2BC879EF004426C3 /* FirebaseAuth in Frameworks */,
 				F2A9194B46331BCC21F9366E /* libPods-StepVision.a in Frameworks */,
+				48EAD5852BDBF70A006AA783 /* StripePaymentSheet in Frameworks */,
+				48EAD5892BDC3669006AA783 /* Stripe in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +239,7 @@
 				48067B072BC8ADB2004426C3 /* Supporting */,
 				48067B0B2BC8B0AB004426C3 /* TabBar */,
 				4851621E2BD80F1100B63DC6 /* FirestoreAPIManager.swift */,
+				48EAD5762BDA576F006AA783 /* Temp Storyboard.storyboard */,
 			);
 			path = StepVision;
 			sourceTree = "<group>";
@@ -284,6 +297,9 @@
 			isa = PBXGroup;
 			children = (
 				489E645C2BC683720081B7E9 /* Cart.storyboard */,
+				48EAD57D2BDA6C2A006AA783 /* CartViewController.swift */,
+				48EAD57B2BDA5B8D006AA783 /* CartTableViewCell.swift */,
+				48EAD5862BDBF860006AA783 /* TempViewController.swift */,
 			);
 			path = "Shopping Cart";
 			sourceTree = "<group>";
@@ -421,6 +437,8 @@
 				48A8E5D32BC61A41001A308A /* SplineRuntime */,
 				48067AFD2BC879EF004426C3 /* FirebaseAuth */,
 				48067B012BC8892D004426C3 /* FirebaseFirestore */,
+				48EAD5842BDBF70A006AA783 /* StripePaymentSheet */,
+				48EAD5882BDC3669006AA783 /* Stripe */,
 			);
 			productName = CameraKitSample;
 			productReference = 0FF07ECA23D79DC400CFFA3F /* StepVision.app */;
@@ -498,6 +516,7 @@
 			packageReferences = (
 				48A8E5D22BC61A41001A308A /* XCRemoteSwiftPackageReference "spline-ios" */,
 				48067AFA2BC8591B004426C3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				48EAD5832BDBF6CB006AA783 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */,
 			);
 			productRefGroup = 0FF07ECB23D79DC400CFFA3F /* Products */;
 			projectDirPath = "";
@@ -522,6 +541,7 @@
 				489E645B2BC6835C0081B7E9 /* Home.storyboard in Resources */,
 				48067AF92BC857ED004426C3 /* GoogleService-Info.plist in Resources */,
 				0FF07F0223D7BFC100CFFA3F /* lenses in Resources */,
+				48EAD5772BDA576F006AA783 /* Temp Storyboard.storyboard in Resources */,
 				48A8E5DB2BC68187001A308A /* TabBar.storyboard in Resources */,
 				4878B4FA2BBD239800CDD234 /* Main.storyboard in Resources */,
 				0FF07EDA23D79DC500CFFA3F /* LaunchScreen.storyboard in Resources */,
@@ -637,9 +657,12 @@
 				48067AF72BC83933004426C3 /* AlertManager.swift in Sources */,
 				48A8E5C52BC00937001A308A /* LoginVC.swift in Sources */,
 				48067AFC2BC87898004426C3 /* AuthService.swift in Sources */,
+				48EAD5872BDBF860006AA783 /* TempViewController.swift in Sources */,
 				50F8ED192A033FF400430FAF /* APITokenView.swift in Sources */,
 				48A8E5C32BBFF32C001A308A /* HomeVC.swift in Sources */,
+				48EAD57E2BDA6C2A006AA783 /* CartViewController.swift in Sources */,
 				48067B042BC88CB7004426C3 /* LoginUserRequest.swift in Sources */,
+				48EAD57C2BDA5B8D006AA783 /* CartTableViewCell.swift in Sources */,
 				489E64592BC682D50081B7E9 /* ProfileVC.swift in Sources */,
 				5093DB202943E2A40092D8F2 /* CustomizedCameraViewController.swift in Sources */,
 				48A8E5CB2BC5D3A7001A308A /* OnboardingVC.swift in Sources */,
@@ -1166,6 +1189,14 @@
 				kind = branch;
 			};
 		};
+		48EAD5832BDBF6CB006AA783 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stripe/stripe-ios-spm";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 23.27.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1183,6 +1214,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 48A8E5D22BC61A41001A308A /* XCRemoteSwiftPackageReference "spline-ios" */;
 			productName = SplineRuntime;
+		};
+		48EAD5842BDBF70A006AA783 /* StripePaymentSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48EAD5832BDBF6CB006AA783 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
+			productName = StripePaymentSheet;
+		};
+		48EAD5882BDC3669006AA783 /* Stripe */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48EAD5832BDBF6CB006AA783 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
+			productName = Stripe;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

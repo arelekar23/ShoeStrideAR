@@ -40,7 +40,9 @@ class AuthService {
                 .document(resultUser.uid)
                 .setData([
                     "username": username,
-                    "email": email
+                    "email": email,
+                    "cart": [String](),
+                    "favorites": [String]()
                 ]) { error in
                     if let error = error {
                         completion(false, error)

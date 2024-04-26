@@ -15,4 +15,5 @@ struct ShoeCell {
     let price: Double
     let image: UIImage
     let description: String
+    let quantity: Int
 }
