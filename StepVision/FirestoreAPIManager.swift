@@ -117,6 +117,7 @@ class FirestoreAPIManager {
         }
     }
 
+
     func returnCurrentUserProfileImageUrl(completion: @escaping (String?) -> Void) {
         guard let currentUser = Auth.auth().currentUser else {
             // No logged-in user, return nil
@@ -194,6 +195,7 @@ class FirestoreAPIManager {
             }
         }
     }
+
 
     func removeFromCart(shoes: Shoes, completion: @escaping (Result<Void, Error>, Bool) -> Void) {
         let db = Firestore.firestore()

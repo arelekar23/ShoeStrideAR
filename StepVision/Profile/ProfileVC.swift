@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 
 class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
-
+    
     @IBOutlet var tableView: UITableView!
     @IBOutlet var profileImage: UIImageView!
     @IBOutlet var profileView: UIView!
@@ -134,6 +134,7 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         profileView.layer.cornerRadius = 15
     }
     
+
     func downloadImage(from urlString: String, completion: @escaping (UIImage?) -> Void) {
         guard let url = URL(string: urlString) else {
             completion(nil)
@@ -179,28 +180,7 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         }
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            tableView.deselectRow(at: indexPath, animated: true)
-
-            let selectedItem = profileItems[indexPath.row]
-            if selectedItem == "Logout" {
-                do {
-                    try Auth.auth().signOut()
-                    showAlert(title: "Logged Out", message: "You have been logged out successfully.", completionHandler: {
-                        // Navigate to the sign-in page after tapping "OK"
-                        self.navigateToSignInPage()
-                    })
-                }
-                catch {
-        
-                }
-            } else if selectedItem == "Delete Account" {
-                deleteAccount()
-            } else {
-                // Handle other cell selections if needed
-        }
-    }
+   
     
     func showAlert(title: String, message: String, completionHandler: (() -> Void)?) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -257,10 +237,23 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
 
 
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedOption = profileItems[indexPath.row]
         
         switch selectedOption {
+        case "Logout":
+            do {
+                try Auth.auth().signOut()
+                showAlert(title: "Logged Out", message: "You have been logged out successfully.", completionHandler: {
+                    // Navigate to the sign-in page after tapping "OK"
+                    self.navigateToSignInPage()
+                })
+            }
+            catch {
+    
+            }
+        case "Delete Account":
+            deleteAccount()
         case "Help":
             let helpMessage = """
             If you need any assistance or have any questions about our app, we're here to help!
