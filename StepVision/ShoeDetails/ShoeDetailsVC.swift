@@ -102,6 +102,81 @@ class ShoeDetailsVC: UIViewController, SnapchatDelegate, AppOrientationDelegate 
     @IBOutlet var arButton: UIButton!
     @IBOutlet var buttonsView: UIView!
     @IBOutlet var likeButton: UIButton!
+    @IBOutlet var size1: UIButton!
+    @IBOutlet var size2: UIButton!
+    @IBOutlet var size3: UIButton!
+    @IBOutlet var size4: UIButton!
+    @IBOutlet var size5: UIButton!
+    @IBOutlet var size6: UIButton!
+    @IBAction func size1(_ sender: UIButton) {
+        let isSelected = size1.currentImage == UIImage(systemName: "38.square.fill")
+        if isSelected {
+            size1.setImage(UIImage(systemName: "38.square"), for: .normal)
+        }
+        else {
+            deselectAllSizes()
+            size1.setImage(UIImage(systemName: "38.square.fill"), for: .normal)
+        }
+    }
+    @IBAction func size2(_ sender: UIButton) {
+        let isSelected = size1.currentImage == UIImage(systemName: "39.square.fill")
+        if isSelected {
+            size2.setImage(UIImage(systemName: "39.square"), for: .normal)
+        }
+        else {
+            deselectAllSizes()
+            size2.setImage(UIImage(systemName: "39.square.fill"), for: .normal)
+        }
+    }
+    @IBAction func size3(_ sender: UIButton) {
+        let isSelected = size1.currentImage == UIImage(systemName: "40.square.fill")
+        if isSelected {
+            size3.setImage(UIImage(systemName: "40.square"), for: .normal)
+        }
+        else {
+            deselectAllSizes()
+            size3.setImage(UIImage(systemName: "40.square.fill"), for: .normal)
+        }
+    }
+    @IBAction func size4(_ sender: UIButton) {
+        let isSelected = size1.currentImage == UIImage(systemName: "41.square.fill")
+        if isSelected {
+            size4.setImage(UIImage(systemName: "41.square"), for: .normal)
+        }
+        else {
+            deselectAllSizes()
+            size4.setImage(UIImage(systemName: "41.square.fill"), for: .normal)
+        }
+    }
+    @IBAction func size5(_ sender: UIButton) {
+        let isSelected = size1.currentImage == UIImage(systemName: "42.square.fill")
+        if isSelected {
+            size5.setImage(UIImage(systemName: "42.square"), for: .normal)
+        }
+        else {
+            deselectAllSizes()
+            size5.setImage(UIImage(systemName: "42.square.fill"), for: .normal)
+        }
+    }
+    @IBAction func size6(_ sender: UIButton) {
+        let isSelected = size1.currentImage == UIImage(systemName: "43.square.fill")
+        if isSelected {
+            size6.setImage(UIImage(systemName: "43.square"), for: .normal)
+        }
+        else {
+            deselectAllSizes()
+            size6.setImage(UIImage(systemName: "43.square.fill"), for: .normal)
+        }
+    }
+    
+    func deselectAllSizes() {
+        size1.setImage(UIImage(systemName: "38.square"), for: .normal)
+        size2.setImage(UIImage(systemName: "39.square"), for: .normal)
+        size3.setImage(UIImage(systemName: "40.square"), for: .normal)
+        size4.setImage(UIImage(systemName: "41.square"), for: .normal)
+        size5.setImage(UIImage(systemName: "42.square"), for: .normal)
+        size6.setImage(UIImage(systemName: "43.square"), for: .normal)
+    }
     @IBAction func likeButtonTapped(_ sender: UIButton) {
         if let shoe = shoe {
             let isLiked = likeButton.currentImage == UIImage(systemName: "heart.fill")
