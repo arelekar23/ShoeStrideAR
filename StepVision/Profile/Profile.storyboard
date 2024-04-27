@@ -20,7 +20,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mI6-YF-qUW">
                                 <rect key="frame" x="40" y="99" width="317" height="212"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adwait Relekar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRx-sK-Jiz">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRx-sK-Jiz">
                                         <rect key="frame" x="69" y="60" width="175" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="175" id="gZW-rf-tio"/>
@@ -90,7 +90,7 @@
                                     <constraint firstItem="mRx-sK-Jiz" firstAttribute="centerX" secondItem="mI6-YF-qUW" secondAttribute="centerX" constant="-2" id="pAL-oh-NsU"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="a75243b2-55fb-4e8f-8227-2ce6ce43b169.png" translatesAutoresizingMaskIntoConstraints="NO" id="bzg-Xi-iVo">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bzg-Xi-iVo">
                                 <rect key="frame" x="156.66666666666666" y="64" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="Ukj-Y8-BDF"/>
@@ -141,6 +141,7 @@
                     <navigationItem key="navigationItem" title="Profile Settings" id="FZZ-Yu-45g"/>
                     <connections>
                         <outlet property="profileImage" destination="bzg-Xi-iVo" id="hDD-TS-1hx"/>
+                        <outlet property="profileName" destination="mRx-sK-Jiz" id="x9u-sl-jrV"/>
                         <outlet property="profileView" destination="mI6-YF-qUW" id="NFc-P7-51P"/>
                         <outlet property="tableView" destination="yqB-LO-nsH" id="3F2-nK-Rwj"/>
                     </connections>
@@ -151,7 +152,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="a75243b2-55fb-4e8f-8227-2ce6ce43b169.png" width="186" height="186"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
