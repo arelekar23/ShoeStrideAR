@@ -97,6 +97,66 @@ class FirestoreAPIManager {
         }
     }
     
+    func fetchPurchasedCount(completion: @escaping (Result<Int, Error>) -> Void) {
+        guard let currentUser = Auth.auth().currentUser else {
+            let error = NSError(domain: "Auth", code: -1, userInfo: [NSLocalizedDescriptionKey: "No logged-in user."])
+            completion(.failure(error))
+            return
+        }
+
+        let db = Firestore.firestore()
+        let userDocument = db.collection("users").document(currentUser.uid)
+
+        userDocument.getDocument { (document, error) in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+
+            guard let document = document, document.exists else {
+                let error = NSError(domain: "Firestore", code: -1, userInfo: [NSLocalizedDescriptionKey: "User document does not exist."])
+                completion(.failure(error))
+                return
+            }
+
+            if let purchasedCount = document.data()?["purchased"] as? Int {
+                completion(.success(purchasedCount))
+            } else {
+                let error = NSError(domain: "Firestore", code: -1, userInfo: [NSLocalizedDescriptionKey: "Purchased count not found or invalid format."])
+                completion(.failure(error))
+            }
+        }
+    }
+
+    
+    func addOrder(orderData: [String: Any], Quantity: Int, completion: @escaping (Result<Void, Error>) -> Void) {
+        guard let currentUser = Auth.auth().currentUser else {
+            let error = NSError(domain: "Auth", code: -1, userInfo: [NSLocalizedDescriptionKey: "No logged-in user."])
+            completion(.failure(error))
+            return
+        }
+        
+        let db = Firestore.firestore()
+        let userCollection = db.collection("users")
+        let userDocument = userCollection.document(currentUser.uid)
+        
+        // Increment the 'purchased' field by the total quantity from cart
+        userDocument.updateData([
+            "orders": FieldValue.arrayUnion([orderData]),
+            "purchased": FieldValue.increment(Int64(Quantity))
+        ]) { error in
+            if let error = error {
+                // If there's an error, return failure
+                completion(.failure(error))
+            } else {
+                // If successful, return success
+                completion(.success(()))
+            }
+        }
+    }
+
+
+    
     func removeAllItemsFromCart(completion: @escaping (Result<Void, Error>, Bool) -> Void) {
         let db = Firestore.firestore()
         let userCollection = db.collection("users")

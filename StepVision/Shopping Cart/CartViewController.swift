@@ -44,6 +44,7 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         paymentSheet?.present(from: self) { paymentResult in
             switch paymentResult {
             case .completed:
+                self.addOrdersToFirestore()
                 self.cartItems.removeAll()
                 self.fetchProducts()
                 self.updateEmptyCartMessage()
@@ -58,6 +59,31 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
+    func addOrdersToFirestore() {
+        
+        for cartItem in cartItems {
+            let orderData: [String: Any] = [
+                "shoeName": cartItem.shoe.shoeName,
+                "price": cartItem.shoe.retailPrice,
+                "image": cartItem.shoe.image,
+                "description": cartItem.shoe.description,
+                "quantity": cartItem.quantity,
+                "timestamp": Date().timeIntervalSince1970 // Add timestamp for ordering
+            ]
+            
+            
+            // Add order to Firestore
+            firestoreApi.addOrder(orderData: orderData, Quantity: cartItem.quantity) { result in
+                switch result {
+                case .success:
+                    print("Order added to Firestore")
+                case .failure(let error):
+                    print("Failed to add order to Firestore: \(error)")
+                }
+            }
+        }
+    }
+
     func handleOrderCompletion() {
         self.placeOrderButton.isEnabled = false
         self.emptyCart()
