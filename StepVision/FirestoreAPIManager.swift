@@ -97,6 +97,33 @@ class FirestoreAPIManager {
         }
     }
     
+    func fetchPartnerGroupId(forShoe shoeName: String, completion: @escaping (Result<String?, Error>) -> Void) {
+        let db = Firestore.firestore()
+        let shoesCollection = db.collection("shoes")
+        
+        let query = shoesCollection.whereField("shoeName", isEqualTo: shoeName)
+        
+        query.getDocuments { (querySnapshot, error) in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            
+            guard let documents = querySnapshot?.documents else {
+                completion(.success(nil))
+                return
+            }
+            
+            if let document = documents.first {
+                let partnerGroupId = document["partnerGroupId"] as? String
+                completion(.success(partnerGroupId))
+            } else {
+                completion(.success(nil))
+            }
+        }
+    }
+
+    
     func fetchPurchasedCount(completion: @escaping (Result<Int, Error>) -> Void) {
         guard let currentUser = Auth.auth().currentUser else {
             let error = NSError(domain: "Auth", code: -1, userInfo: [NSLocalizedDescriptionKey: "No logged-in user."])
@@ -124,6 +151,182 @@ class FirestoreAPIManager {
             } else {
                 let error = NSError(domain: "Firestore", code: -1, userInfo: [NSLocalizedDescriptionKey: "Purchased count not found or invalid format."])
                 completion(.failure(error))
+            }
+        }
+    }
+
+    func incrementFavoritesCount(for shoe: Shoes, completion: @escaping (Bool) -> Void) {
+        guard let currentUser = Auth.auth().currentUser else {
+            print("No logged-in user.")
+            completion(false)
+            return
+        }
+
+        let db = Firestore.firestore()
+        let userCollection = db.collection("users")
+        let userDocument = userCollection.document(currentUser.uid)
+        
+        // Update the favorites count for the shoe in the user's document
+        userDocument.updateData(["favorites": FieldValue.increment(Int64(1))]) { error in
+            if let error = error {
+                print("Error incrementing favorites count: \(error.localizedDescription)")
+                completion(false)
+            } else {
+                print("Favorites count incremented successfully.")
+                completion(true)
+            }
+        }
+    }
+
+    func decrementFavoritesCount(for shoe: Shoes, completion: @escaping (Bool) -> Void) {
+        guard let currentUser = Auth.auth().currentUser else {
+            print("No logged-in user.")
+            completion(false)
+            return
+        }
+
+        let db = Firestore.firestore()
+        let userCollection = db.collection("users")
+        let userDocument = userCollection.document(currentUser.uid)
+        
+        // Update the favorites count for the shoe in the user's document
+        userDocument.updateData(["favorites": FieldValue.increment(Int64(-1))]) { error in
+            if let error = error {
+                print("Error decrementing favorites count: \(error.localizedDescription)")
+                completion(false)
+            } else {
+                print("Favorites count decremented successfully.")
+                completion(true)
+            }
+        }
+    }
+    
+    func updateFavoriteShoes(shoeName: String, isFavorite: Bool, completion: @escaping (Bool) -> Void) {
+        guard let currentUser = Auth.auth().currentUser else {
+            print("No logged-in user.")
+            completion(false)
+            return
+        }
+
+        let db = Firestore.firestore()
+        let userCollection = db.collection("users")
+        let userDocument = userCollection.document(currentUser.uid)
+
+        userDocument.getDocument { (document, error) in
+            if let error = error {
+                print("Error fetching user document: \(error.localizedDescription)")
+                completion(false)
+                return
+            }
+
+            guard var userData = document?.data(), var favoriteShoes = userData["favoriteShoes"] as? [String] else {
+                print("Favorite shoes not found or invalid format.")
+                completion(false)
+                return
+            }
+
+            if isFavorite {
+                // Append shoeName to favoriteShoes array if it's not already there
+                if !favoriteShoes.contains(shoeName) {
+                    favoriteShoes.append(shoeName)
+                    userData["favoriteShoes"] = favoriteShoes
+                    userDocument.setData(userData) { error in
+                        if let error = error {
+                            print("Error updating favorite shoes: \(error.localizedDescription)")
+                            completion(false)
+                        } else {
+                            print("Favorite shoes updated successfully.")
+                            completion(true)
+                        }
+                    }
+                } else {
+                    // Shoe already exists in favoriteShoes array
+                    print("Shoe already exists in favorite shoes.")
+                    completion(true)
+                }
+            } else {
+                // Remove shoeName from favoriteShoes array if it exists
+                if let index = favoriteShoes.firstIndex(of: shoeName) {
+                    favoriteShoes.remove(at: index)
+                    userData["favoriteShoes"] = favoriteShoes
+                    userDocument.setData(userData) { error in
+                        if let error = error {
+                            print("Error updating favorite shoes: \(error.localizedDescription)")
+                            completion(false)
+                        } else {
+                            print("Favorite shoes updated successfully.")
+                            completion(true)
+                        }
+                    }
+                } else {
+                    // Shoe does not exist in favoriteShoes array
+                    print("Shoe does not exist in favorite shoes.")
+                    completion(true)
+                }
+            }
+        }
+    }
+
+    func isShoeInFavorites(shoeName: String, completion: @escaping (Bool) -> Void) {
+        guard let currentUser = Auth.auth().currentUser else {
+            print("No logged-in user.")
+            completion(false)
+            return
+        }
+
+        let db = Firestore.firestore()
+        let userCollection = db.collection("users")
+        let userDocument = userCollection.document(currentUser.uid)
+
+        userDocument.getDocument { (document, error) in
+            if let error = error {
+                print("Error fetching user document: \(error.localizedDescription)")
+                completion(false)
+                return
+            }
+
+            guard let userData = document?.data(), let favoriteShoes = userData["favoriteShoes"] as? [String] else {
+                print("Favorite shoes not found or invalid format.")
+                completion(false)
+                return
+            }
+
+            // Check if the shoeName is in the favoriteShoes array
+            let isInFavorites = favoriteShoes.contains(shoeName)
+            completion(isInFavorites)
+        }
+    }
+
+    
+    func fetchFavoritesCount(completion: @escaping (Int?) -> Void) {
+        guard let currentUser = Auth.auth().currentUser else {
+            print("No logged-in user.")
+            completion(nil)
+            return
+        }
+
+        let db = Firestore.firestore()
+        let userCollection = db.collection("users")
+        let userDocument = userCollection.document(currentUser.uid)
+        
+        userDocument.getDocument { (document, error) in
+            if let error = error {
+                print("Error fetching user document: \(error.localizedDescription)")
+                completion(nil)
+                return
+            }
+            
+            guard let document = document, document.exists else {
+                print("User document does not exist.")
+                completion(nil)
+                return
+            }
+            
+            if let favoritesCount = document.data()?["favorites"] as? Int {
+                completion(favoritesCount)
+            } else {
+                print("Favorites count not found or invalid format.")
+                completion(nil)
             }
         }
     }

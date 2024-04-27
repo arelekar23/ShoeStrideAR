@@ -19,7 +19,7 @@ class ShoeDetailsVC: UIViewController, SnapchatDelegate, AppOrientationDelegate 
     let firestoreApi = FirestoreAPIManager.shared
     
     private enum Constants {
-        static let partnerGroupId = "b6f8aaeb-05f4-4c87-9973-a2fdd343258b"
+        static var partnerGroupId = ""
     }
 
     var window: UIWindow?
@@ -101,6 +101,52 @@ class ShoeDetailsVC: UIViewController, SnapchatDelegate, AppOrientationDelegate 
     @IBOutlet var shoeImage: UIImageView!
     @IBOutlet var arButton: UIButton!
     @IBOutlet var buttonsView: UIView!
+    @IBOutlet var likeButton: UIButton!
+    @IBAction func likeButtonTapped(_ sender: UIButton) {
+        if let shoe = shoe {
+            let isLiked = likeButton.currentImage == UIImage(systemName: "heart.fill")
+            if isLiked {
+                // If already liked, decrement favorites count
+                firestoreApi.decrementFavoritesCount(for: shoe) { success in
+                    if success {
+                        print("Favorites count decremented successfully.")
+                    } else {
+                        print("Failed to decrement favorites count.")
+                    }
+                }
+                firestoreApi.updateFavoriteShoes(shoeName: shoe.shoeName, isFavorite: false) { success in
+                    if success {
+                        print("Favorite shoes updated successfully.")
+                    } else {
+                        print("Failed to update favorite shoes.")
+                        // Handle error
+                    }
+                }
+                likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+            } else {
+                // If not liked, increment favorites count
+                firestoreApi.incrementFavoritesCount(for: shoe) { success in
+                    if success {
+                        print("Favorites count incremented successfully.")
+                    } else {
+                        print("Failed to increment favorites count.")
+                    }
+                }
+                firestoreApi.updateFavoriteShoes(shoeName: shoe.shoeName, isFavorite: true) { success in
+                    if success {
+                        print("Favorite shoes updated successfully.")
+                    } else {
+                        print("Failed to update favorite shoes.")
+                        // Handle error
+                    }
+                }
+                likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+            }
+        }
+    }
+
+
+
     //    @IBOutlet var addToCart: UIButton!
     
     @IBOutlet var navBar: UINavigationItem!
@@ -109,6 +155,17 @@ class ShoeDetailsVC: UIViewController, SnapchatDelegate, AppOrientationDelegate 
 //        self.view.bounds.origin.y = +92
         super.viewDidLoad()
         
+        firestoreApi.isShoeInFavorites(shoeName: shoe!.shoeName) { isInFavorites in
+            if isInFavorites {
+                self.likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+                print("The shoe is in favorites.")
+            } else {
+                self.likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+                print("The shoe is not in favorites.")
+            }
+        }
+
+//
         detailsView.layer.shadowColor = UIColor.gray.cgColor
         detailsView.layer.shadowOpacity = 0.5
         detailsView.layer.shadowOffset = CGSize(width: 0, height: 2)
@@ -127,6 +184,7 @@ class ShoeDetailsVC: UIViewController, SnapchatDelegate, AppOrientationDelegate 
         } else {
             cameraController.groupIDs = [SCCameraKitLensRepositoryBundledGroup, Constants.partnerGroupId]
         }
+        cameraController.groupIDs = [SCCameraKitLensRepositoryBundledGroup, Constants.partnerGroupId]
         cameraController.snapchatDelegate = self
         cameraViewController = CustomizedCameraViewController(cameraController: cameraController, debugStore: debugStore)
         cameraViewController?.appOrientationDelegate = self
@@ -187,6 +245,7 @@ class ShoeDetailsVC: UIViewController, SnapchatDelegate, AppOrientationDelegate 
         // Add the image view as a sibling view to shoeBg
         shoeBg.superview?.addSubview(shoeImage)
     }
+    
     func createDiagonalCurve(view: UIView) {
         let curvePath = UIBezierPath()
         curvePath.move(to: CGPoint(x: 0, y: 0)) // Start from top-left corner

@@ -395,6 +395,9 @@
                                         <rect key="frame" x="14.999999999999996" y="20.000000000000004" width="50.666666666666657" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                                        <connections>
+                                            <action selector="likeButtonTapped:" destination="Rxa-W3-uh2" eventType="touchUpInside" id="gkP-lt-tGD"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -427,6 +430,7 @@
                         <outlet property="brand" destination="Pob-Ik-b7r" id="bw9-7R-c0M"/>
                         <outlet property="buttonsView" destination="GFY-qF-NMU" id="xHc-LN-Dl8"/>
                         <outlet property="detailsView" destination="EAG-Vl-z8p" id="XBB-kM-gmt"/>
+                        <outlet property="likeButton" destination="N2Z-05-OCT" id="zwS-3Y-dmt"/>
                         <outlet property="name" destination="KwO-1s-agh" id="5Zx-Rl-RBu"/>
                         <outlet property="navBar" destination="m63-aC-c7k" id="IlA-O9-Lne"/>
                         <outlet property="price" destination="Gha-SV-c6y" id="usp-A1-LTE"/>

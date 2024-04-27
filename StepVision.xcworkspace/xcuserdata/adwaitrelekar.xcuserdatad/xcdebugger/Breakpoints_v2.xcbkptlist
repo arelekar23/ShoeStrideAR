@@ -350,8 +350,8 @@
             filePath = "StepVision/ShoeDetails/ShoeDetailsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
             landmarkName = "openCamera(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -940,8 +940,8 @@
             filePath = "StepVision/Profile/ProfileVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -956,8 +956,8 @@
             filePath = "StepVision/Profile/ProfileVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -972,8 +972,8 @@
             filePath = "StepVision/FirestoreAPIManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "218"
-            endingLineNumber = "218"
+            startingLineNumber = "421"
+            endingLineNumber = "421"
             landmarkName = "returnCurrentUserName(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -988,9 +988,9 @@
             filePath = "StepVision/FirestoreAPIManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "239"
-            endingLineNumber = "239"
-            landmarkName = "removeFromCart(shoes:completion:)"
+            startingLineNumber = "442"
+            endingLineNumber = "442"
+            landmarkName = "returnCurrentUserName(completion:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -1036,8 +1036,8 @@
             filePath = "StepVision/FirestoreAPIManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "219"
-            endingLineNumber = "219"
+            startingLineNumber = "422"
+            endingLineNumber = "422"
             landmarkName = "returnCurrentUserName(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1052,9 +1052,9 @@
             filePath = "StepVision/Profile/ProfileVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
-            landmarkName = "uploadImageToFirestore(image:)"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "imagePickerControllerDidCancel(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1068,9 +1068,9 @@
             filePath = "StepVision/Profile/ProfileVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
-            landmarkName = "uploadImageToFirestore(image:)"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "imagePickerControllerDidCancel(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1084,9 +1084,89 @@
             filePath = "StepVision/Profile/ProfileVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "imageViewTapped()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D68D9D44-10E6-4BB6-8B6C-E2F5BA16E54A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StepVision/ShoeDetails/ShoeDetailsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FC56B75B-D149-45EA-A780-CE99D8065DC5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StepVision/ShoeDetails/ShoeDetailsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "likeButtonTapped(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FC56B75B-D149-45EA-A780-CE99D8065DC5 - f01cf0ca7834a028"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StepVision.ShoeDetailsVC.likeButtonTapped(__C.UIButton) -&gt; ()"
+                  moduleName = "StepVision"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adwaitrelekar/Desktop/SEM%202/iOS%20Course/Final%20Project/StepVision/StepVision/ShoeDetails/ShoeDetailsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "117"
+                  endingLineNumber = "117"
+                  offsetFromSymbolStart = "764">
+               </Location>
+               <Location
+                  uuid = "FC56B75B-D149-45EA-A780-CE99D8065DC5 - 159678e4ddfd5137"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Bool) -&gt; () in StepVision.ShoeDetailsVC.likeButtonTapped(__C.UIButton) -&gt; ()"
+                  moduleName = "StepVision"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adwaitrelekar/Desktop/SEM%202/iOS%20Course/Final%20Project/StepVision/StepVision/ShoeDetails/ShoeDetailsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E6E07FB2-FAAA-46DD-8A3C-78A43990B85F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StepVision/ShoeDetails/ShoeDetailsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "likeButtonTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

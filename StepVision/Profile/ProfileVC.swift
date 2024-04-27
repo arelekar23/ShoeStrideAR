@@ -16,6 +16,7 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     @IBOutlet var profileView: UIView!
     @IBOutlet var profileName: UILabel!
     @IBOutlet var purchasedCount: UILabel!
+    @IBOutlet var likesCount: UILabel!
     let firestoreApi = FirestoreAPIManager.shared
     
     let profileItems = ["My Orders", "Returns", "Invite Friends", "Payments", "Delete Account", "Help", "About", "Logout"]
@@ -34,6 +35,20 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         gradient.endPoint = CGPoint(x: 1, y: 0.5)
         self.view.layer.insertSublayer(gradient, at: 0)
         
+        firestoreApi.fetchFavoritesCount { count in
+            if let count = count {
+                DispatchQueue.main.async {
+                    self.likesCount.text = "\(count)"
+                }
+            } else {
+                print("Failed to fetch favorites count.")
+                // Handle error
+            }
+        }
+        
+        
+
+
         firestoreApi.fetchPurchasedCount { result in
             switch result {
             case .success(let count):

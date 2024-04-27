@@ -140,6 +140,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Profile Settings" id="FZZ-Yu-45g"/>
                     <connections>
+                        <outlet property="likesCount" destination="zJC-i8-qqv" id="rLY-S4-WPS"/>
                         <outlet property="profileImage" destination="bzg-Xi-iVo" id="hDD-TS-1hx"/>
                         <outlet property="profileName" destination="mRx-sK-Jiz" id="x9u-sl-jrV"/>
                         <outlet property="profileView" destination="mI6-YF-qUW" id="NFc-P7-51P"/>
