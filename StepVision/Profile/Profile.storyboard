@@ -42,8 +42,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ij2-Qt-LWc">
-                                                <rect key="frame" x="22.000000000000004" y="24.666666666666654" width="41.333333333333343" height="15.333333333333332"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ij2-Qt-LWc">
+                                                <rect key="frame" x="37.333333333333329" y="24.666666666666654" width="10.333333333333336" height="15.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -66,8 +66,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJC-i8-qqv">
-                                                <rect key="frame" x="19.333333333333318" y="21" width="41.333333333333343" height="19"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJC-i8-qqv">
+                                                <rect key="frame" x="35" y="21" width="10.333333333333336" height="19"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -143,6 +143,7 @@
                         <outlet property="profileImage" destination="bzg-Xi-iVo" id="hDD-TS-1hx"/>
                         <outlet property="profileName" destination="mRx-sK-Jiz" id="x9u-sl-jrV"/>
                         <outlet property="profileView" destination="mI6-YF-qUW" id="NFc-P7-51P"/>
+                        <outlet property="purchasedCount" destination="ij2-Qt-LWc" id="4ph-5J-YUT"/>
                         <outlet property="tableView" destination="yqB-LO-nsH" id="3F2-nK-Rwj"/>
                     </connections>
                 </viewController>

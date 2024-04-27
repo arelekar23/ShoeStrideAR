@@ -15,6 +15,7 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     @IBOutlet var profileImage: UIImageView!
     @IBOutlet var profileView: UIView!
     @IBOutlet var profileName: UILabel!
+    @IBOutlet var purchasedCount: UILabel!
     let firestoreApi = FirestoreAPIManager.shared
     
     let profileItems = ["My Orders", "Returns", "Invite Friends", "Payments", "Delete Account", "Help", "About", "Logout"]
@@ -26,12 +27,24 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         let gradient = CAGradientLayer()
         gradient.frame = self.view.bounds
         gradient.colors = [
-            UIColor(red: 100/255.0, green: 184/255.0, blue: 225/255.0, alpha: 0.5).cgColor,
-            UIColor(red: 200/255.0, green: 152/255.0, blue: 240/255.0, alpha: 0.5).cgColor
+            UIColor(red: 240/255.0, green: 152/255.0, blue: 240/255.0, alpha: 0.5).cgColor,
+            UIColor(red: 100/255.0, green: 184/255.0, blue: 225/255.0, alpha: 0.5).cgColor
         ]
         gradient.startPoint = CGPoint(x: 0, y: 0.5)
         gradient.endPoint = CGPoint(x: 1, y: 0.5)
         self.view.layer.insertSublayer(gradient, at: 0)
+        
+        firestoreApi.fetchPurchasedCount { result in
+            switch result {
+            case .success(let count):
+                DispatchQueue.main.async {
+                    self.purchasedCount.text = "\(count)"
+                }
+            case .failure(let error):
+                print("Failed to fetch purchased count: \(error.localizedDescription)")
+                // Handle error
+            }
+        }
         
         firestoreApi.returnCurrentUserName { userName in
             DispatchQueue.main.async {
