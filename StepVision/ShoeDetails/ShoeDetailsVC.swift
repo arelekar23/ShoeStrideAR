@@ -14,14 +14,16 @@ import SCSDKCreativeKit
     import SCSDKLoginKit
 #endif
 
+
+
 class ShoeDetailsVC: UIViewController, SnapchatDelegate, AppOrientationDelegate {
 
     let firestoreApi = FirestoreAPIManager.shared
-    
+    var partnersGroupId: String?
     private enum Constants {
-        static var partnerGroupId = ""
+        static var partnerGroupId = "3c0211a3-557d-462c-80cc-68c48e77b1ab"
     }
-
+    
     var window: UIWindow?
     fileprivate var supportedOrientations: UIInterfaceOrientationMask = .allButUpsideDown
 
@@ -34,13 +36,15 @@ class ShoeDetailsVC: UIViewController, SnapchatDelegate, AppOrientationDelegate 
         }
     }()
 
-    private let debugStore: (any DebugStoreProtocol)? = {
+    private lazy var debugStore: (any DebugStoreProtocol)? = {
         if #available(iOS 13, *) {
             return DebugStore(defaultGroupIDs: [SCCameraKitLensRepositoryBundledGroup, Constants.partnerGroupId])
         } else {
             return nil
         }
     }()
+    
+    
 
     func cameraKitViewController(_ viewController: UIViewController, openSnapchat screen: SnapchatScreen) {
         switch screen {
@@ -229,7 +233,7 @@ class ShoeDetailsVC: UIViewController, SnapchatDelegate, AppOrientationDelegate 
     override func viewDidLoad() {
 //        self.view.bounds.origin.y = +92
         super.viewDidLoad()
-        
+//        Constants.partnerGroupId = partnersGroupId!
         firestoreApi.isShoeInFavorites(shoeName: shoe!.shoeName) { isInFavorites in
             if isInFavorites {
                 self.likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
@@ -255,11 +259,11 @@ class ShoeDetailsVC: UIViewController, SnapchatDelegate, AppOrientationDelegate 
         
         
         if let previousGroupIDs = debugStore?.groupIDs {
-            cameraController.groupIDs = previousGroupIDs
+            cameraController.groupIDs = [Constants.partnerGroupId]
         } else {
             cameraController.groupIDs = [SCCameraKitLensRepositoryBundledGroup, Constants.partnerGroupId]
         }
-        cameraController.groupIDs = [SCCameraKitLensRepositoryBundledGroup, Constants.partnerGroupId]
+//        cameraController.groupIDs = [Constants.partnerGroupId]
         cameraController.snapchatDelegate = self
         cameraViewController = CustomizedCameraViewController(cameraController: cameraController, debugStore: debugStore)
         cameraViewController?.appOrientationDelegate = self

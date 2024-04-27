@@ -181,9 +181,23 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         if segue.identifier == "ToShoeDetailsVC" {
            if let indexPath = collectionView.indexPathsForSelectedItems?.first {
                let selectedShoe = shoes[indexPath.row]
+               
                // Pass the selected shoe label to the next view controller
                if let shoeDetailsVC = segue.destination as? ShoeDetailsVC {
                    shoeDetailsVC.shoe = selectedShoe
+                   firestoreApi.fetchPartnerGroupId(forShoe: selectedShoe.shoeName) { result in
+                       switch result {
+                       case .success(let partnerGroupId):
+                           if let partnerGroupId = partnerGroupId {
+                               // Use partnerGroupId
+                               shoeDetailsVC.partnersGroupId = partnerGroupId
+                           } else {
+                               // Handle nil partnerGroupId
+                           }
+                       case .failure(let error): break
+                           // Handle error
+                       }
+                   }
                }
            }
        }
