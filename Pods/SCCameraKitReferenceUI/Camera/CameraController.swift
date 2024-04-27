@@ -120,9 +120,12 @@ open class CameraController: NSObject, LensRepositoryGroupObserver, LensPrefetch
                 cameraKit.lenses.repository.removeObserver(self, groupID: group)
             }
             for group in addedIDs {
-                cameraKit.lenses.repository.addObserver(self, groupID: "b6f8aaeb-05f4-4c87-9973-a2fdd343258b")
+                cameraKit.lenses.repository.addObserver(self, groupID: group)
+//                cameraKit.lenses.repository.lens(id: "929ea505-1d72-44c0-92b2-cc1f2a49e525", groupID: group);
+//                cameraKit.lenses.repository.addObserver(self, groupID: "3c0211a3-557d-462c-80cc-68c48e77b1ab")
             }
-            cameraKit.lenses.repository.lens(id: "8551e3a7-c911-44b6-94b7-796489e3a15d", groupID: "b6f8aaeb-05f4-4c87-9973-a2fdd343258b");
+//            cameraKit.lenses.repository.lens(id: "8551e3a7-c911-44b6-94b7-796489e3a15d", groupID: "b6f8aaeb-05f4-4c87-9973-a2fdd343258b");
+//            cameraKit.lenses.repository.lens(id: "929ea505-1d72-44c0-92b2-cc1f2a49e525", groupID: "3c0211a3-557d-462c-80cc-68c48e77b1ab");
             // you can also observe a single lens in a group if you only care about a specific lens
             // cameraKit.lenses.repository.cameraKit.lenses.repository.addObserver(self, specificLensID: "123", groupID: "1")
             // and then get the lens after by calling

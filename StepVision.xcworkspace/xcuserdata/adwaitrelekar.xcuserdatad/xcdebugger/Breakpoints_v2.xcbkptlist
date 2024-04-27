@@ -96,8 +96,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "175"
             endingLineNumber = "175"
-            landmarkName = "HomeVC"
-            landmarkType = "21">
+            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "22583B69-206F-4CB4-B773-B3235B25FCC4 - da4856b68c84224e"
@@ -350,8 +350,8 @@
             filePath = "StepVision/ShoeDetails/ShoeDetailsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "289"
-            endingLineNumber = "289"
+            startingLineNumber = "293"
+            endingLineNumber = "293"
             landmarkName = "openCamera(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1100,10 +1100,57 @@
             filePath = "StepVision/ShoeDetails/ShoeDetailsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "257"
-            endingLineNumber = "257"
+            startingLineNumber = "261"
+            endingLineNumber = "261"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D68D9D44-10E6-4BB6-8B6C-E2F5BA16E54A - ceba1e3ba5fe67af"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StepVision.ShoeDetailsVC.viewDidLoad() -&gt; ()"
+                  moduleName = "StepVision"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adwaitrelekar/Desktop/SEM%202/iOS%20Course/Final%20Project/StepVision/StepVision/ShoeDetails/ShoeDetailsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "2936">
+               </Location>
+               <Location
+                  uuid = "D68D9D44-10E6-4BB6-8B6C-E2F5BA16E54A - ceba1e3ba5fe600a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StepVision.ShoeDetailsVC.viewDidLoad() -&gt; ()"
+                  moduleName = "StepVision"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adwaitrelekar/Desktop/SEM%202/iOS%20Course/Final%20Project/StepVision/StepVision/ShoeDetails/ShoeDetailsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "262"
+                  endingLineNumber = "262"
+                  offsetFromSymbolStart = "2824">
+               </Location>
+               <Location
+                  uuid = "D68D9D44-10E6-4BB6-8B6C-E2F5BA16E54A - ceba1e3ba5fe67af"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StepVision.ShoeDetailsVC.viewDidLoad() -&gt; ()"
+                  moduleName = "StepVision"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adwaitrelekar/Desktop/SEM%202/iOS%20Course/Final%20Project/StepVision/StepVision/ShoeDetails/ShoeDetailsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "2924">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1116,8 +1163,8 @@
             filePath = "StepVision/ShoeDetails/ShoeDetailsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
             landmarkName = "likeButtonTapped(_:)"
             landmarkType = "7">
             <Locations>
@@ -1164,10 +1211,266 @@
             filePath = "StepVision/ShoeDetails/ShoeDetailsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
             landmarkName = "likeButtonTapped(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "55AAAC45-B7F3-42EA-AC00-4F8869F36A09"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StepVision/ShoeDetails/ShoeDetailsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "262"
+            endingLineNumber = "262"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5A774049-CA71-4093-BB7A-0125AAA13099"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StepVision/ShoeDetails/ShoeDetailsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "266"
+            endingLineNumber = "266"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DF827433-5053-498C-8297-AAEE40CEBB69"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StepVision/ShoeDetails/ShoeDetailsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "debugStore"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "30EC9228-7595-4DDF-8077-1B8D5A65F8E8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/SCCameraKitReferenceUI/Camera/CameraController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "groupIDs"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C68B3A15-C374-41EF-BDFF-8710F37DAAA5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/SCCameraKitReferenceUI/Camera/CameraController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "groupIDs"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "C68B3A15-C374-41EF-BDFF-8710F37DAAA5 - 469ed7e33e493827"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SCSDKCameraKitReferenceUI.CameraController.groupIDs.didset : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "StepVision"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adwaitrelekar/Desktop/SEM%202/iOS%20Course/Final%20Project/StepVision/Pods/SCCameraKitReferenceUI/Camera/CameraController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "1052">
+               </Location>
+               <Location
+                  uuid = "C68B3A15-C374-41EF-BDFF-8710F37DAAA5 - 469ed7e33e493840"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SCSDKCameraKitReferenceUI.CameraController.groupIDs.didset : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "StepVision"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adwaitrelekar/Desktop/SEM%202/iOS%20Course/Final%20Project/StepVision/Pods/SCCameraKitReferenceUI/Camera/CameraController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "1052">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E38076DA-AA3C-45E0-9355-6E6AA27DEEB8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StepVision/Home/HomeVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5AF53149-5A0E-46FA-9988-278B90BBD4B4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StepVision/Home/HomeVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5AF53149-5A0E-46FA-9988-278B90BBD4B4 - 5ce2d91639cc528a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StepVision.HomeVC.prepare(for: __C.UIStoryboardSegue, sender: Swift.Optional&lt;Any&gt;) -&gt; ()"
+                  moduleName = "StepVision"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adwaitrelekar/Desktop/SEM%202/iOS%20Course/Final%20Project/StepVision/StepVision/Home/HomeVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "188"
+                  endingLineNumber = "188"
+                  offsetFromSymbolStart = "1864">
+               </Location>
+               <Location
+                  uuid = "5AF53149-5A0E-46FA-9988-278B90BBD4B4 - a5e0457ac0aa6c37"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;Swift.String&gt;, Swift.Error&gt;) -&gt; () in StepVision.HomeVC.prepare(for: __C.UIStoryboardSegue, sender: Swift.Optional&lt;Any&gt;) -&gt; ()"
+                  moduleName = "StepVision"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adwaitrelekar/Desktop/SEM%202/iOS%20Course/Final%20Project/StepVision/StepVision/Home/HomeVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "190"
+                  endingLineNumber = "190"
+                  offsetFromSymbolStart = "112">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2F45DB8F-D2A7-45E9-9C26-DBE2DB20C0C9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StepVision/Home/HomeVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F117C86C-83EC-45AA-89E5-C1C73A3E588A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StepVision/Home/HomeVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EB68E073-A2B6-4E5B-A0B8-744F6B9639B8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StepVision/Home/HomeVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EB68E073-A2B6-4E5B-A0B8-744F6B9639B8 - a5e0457ac0aa6c37"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;Swift.String&gt;, Swift.Error&gt;) -&gt; () in StepVision.HomeVC.prepare(for: __C.UIStoryboardSegue, sender: Swift.Optional&lt;Any&gt;) -&gt; ()"
+                  moduleName = "StepVision"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adwaitrelekar/Desktop/SEM%202/iOS%20Course/Final%20Project/StepVision/StepVision/Home/HomeVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "190"
+                  endingLineNumber = "190"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "EB68E073-A2B6-4E5B-A0B8-744F6B9639B8 - a5e0457ac0aa6c37"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;Swift.String&gt;, Swift.Error&gt;) -&gt; () in StepVision.HomeVC.prepare(for: __C.UIStoryboardSegue, sender: Swift.Optional&lt;Any&gt;) -&gt; ()"
+                  moduleName = "StepVision"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adwaitrelekar/Desktop/SEM%202/iOS%20Course/Final%20Project/StepVision/StepVision/Home/HomeVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "190"
+                  endingLineNumber = "190"
+                  offsetFromSymbolStart = "144">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
