@@ -219,6 +219,7 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func updateEmptyCartMessage() {
         if cartItems.isEmpty {
+            placeOrderButton.isEnabled = false
             // Create a label to display the empty cart message
             let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
             messageLabel.text = "Your cart is lonely, add something 😢"

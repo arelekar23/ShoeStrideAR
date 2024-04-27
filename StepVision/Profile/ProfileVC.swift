@@ -28,7 +28,7 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         let gradient = CAGradientLayer()
         gradient.frame = self.view.bounds
         gradient.colors = [
-            UIColor(red: 240/255.0, green: 152/255.0, blue: 240/255.0, alpha: 0.5).cgColor,
+            UIColor(red: 240/255.0, green: 140/255.0, blue: 220/255.0, alpha: 0.5).cgColor,
             UIColor(red: 100/255.0, green: 184/255.0, blue: 225/255.0, alpha: 0.5).cgColor
         ]
         gradient.startPoint = CGPoint(x: 0, y: 0.5)

@@ -15,6 +15,7 @@ class HomeVC:  UIViewController, UISearchBarDelegate {
 
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var tabButtonsView: UIView!
+    @IBOutlet var searchBar: UISearchBar!
     
     @IBOutlet var cellContentView: UIView!
     
@@ -26,11 +27,33 @@ class HomeVC:  UIViewController, UISearchBarDelegate {
     
     var filteredShoeLabels = [String]()
     var isSearching = false
-        
+    var isSearchBarVisible = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        configureSearchBar()
+        configureSearchBar()
+        searchBar.isHidden = true
+        let mainViewGradient = CAGradientLayer()
+        mainViewGradient.frame = self.view.bounds
+        mainViewGradient.colors = [
+            UIColor(red: 240/255.0, green: 152/255.0, blue: 240/255.0, alpha: 0.8).cgColor,
+            UIColor(red: 100/255.0, green: 184/255.0, blue: 225/255.0, alpha: 0.8).cgColor
+        ]
+        mainViewGradient.startPoint = CGPoint(x: 0, y: 0.5)
+        mainViewGradient.endPoint = CGPoint(x: 1, y: 0.5)
+        self.view.layer.insertSublayer(mainViewGradient, at: 0)
+        
+        let gradient = CAGradientLayer()
+        gradient.frame = self.view.bounds
+        gradient.colors = [
+            UIColor(red: 240/255.0, green: 152/255.0, blue: 240/255.0, alpha: 0.8).cgColor,
+            UIColor(red: 100/255.0, green: 184/255.0, blue: 225/255.0, alpha: 0.8).cgColor
+        ]
+        gradient.startPoint = CGPoint(x: 0, y: 0.5)
+        gradient.endPoint = CGPoint(x: 1, y: 0.5)
+        self.collectionView.backgroundView = UIView()
+        self.collectionView.backgroundView?.layer.addSublayer(gradient)
+        
         fetchProducts()
         tabButtonsView.layer.shadowColor = UIColor.darkGray.cgColor
         tabButtonsView.layer.shadowOpacity = 0.5
@@ -42,6 +65,38 @@ class HomeVC:  UIViewController, UISearchBarDelegate {
     override func viewDidAppear(_ animated: Bool) {
         fetchProducts()
     }
+    
+    @IBAction func searchIconTapped(_ sender: UIButton) {
+        if isSearchBarVisible {
+            hideSearchBar()
+        } else {
+            showSearchBar()
+        }
+    }
+    
+    func showSearchBar() {
+            searchBar.alpha = 0.0
+            searchBar.isHidden = false
+            
+            UIView.animate(withDuration: 0.3, animations: {
+                self.searchBar.alpha = 1.0
+            }, completion: { _ in
+                self.searchBar.becomeFirstResponder() // Show keyboard after animation completes
+            })
+            
+            isSearchBarVisible = true
+        }
+        
+        func hideSearchBar() {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.searchBar.alpha = 0.0
+            }, completion: { _ in
+                self.searchBar.isHidden = true
+            })
+            
+            isSearchBarVisible = false
+            searchBar.resignFirstResponder() // Dismiss keyboard
+        }
     
     @IBAction func cartButtonTapped(_ sender: UIButton) {
 //        performSegue(withIdentifier: "ToProfileVC", sender: nil)
@@ -68,24 +123,26 @@ class HomeVC:  UIViewController, UISearchBarDelegate {
     }
 
         
-//    func configureSearchBar() {
-//        if let searchTextField = searchBar.value(forKey: "searchField") as? UITextField {
-//            searchTextField.backgroundColor = .white
-//            searchTextField.textColor = .black
-//            if let placeholder = searchTextField.placeholder {
-//                let attributedString = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
-//                searchTextField.attributedPlaceholder = attributedString
-//            }
-//            if let searchIcon = searchTextField.leftView as? UIImageView {
-//                searchIcon.tintColor = .black
-//            }
-//        }
-//    }
-//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-////        filteredShoeLabels = shoeLabels.filter({ $0.lowercased().contains(searchText.lowercased()) })
-//        isSearching = !searchText.isEmpty
-//        collectionView.reloadData()
-//    }
+    func configureSearchBar() {
+        if let searchTextField = searchBar.value(forKey: "searchField") as? UITextField {
+            searchTextField.backgroundColor = .white
+            searchTextField.textColor = .black
+            if let placeholder = searchTextField.placeholder {
+                let attributedString = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+                searchTextField.attributedPlaceholder = attributedString
+            }
+            if let searchIcon = searchTextField.leftView as? UIImageView {
+                searchIcon.tintColor = .black
+            }
+        }
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredShoes = shoes.filter({ $0.shoeName.lowercased().contains(searchText.lowercased()) })
+        isSearching = !searchText.isEmpty
+        collectionView.reloadData()
+    }
+
     
     
 }
