@@ -49,6 +49,7 @@
 		48EAD5852BDBF70A006AA783 /* StripePaymentSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 48EAD5842BDBF70A006AA783 /* StripePaymentSheet */; };
 		48EAD5872BDBF860006AA783 /* TempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EAD5862BDBF860006AA783 /* TempViewController.swift */; };
 		48EAD5892BDC3669006AA783 /* Stripe in Frameworks */ = {isa = PBXBuildFile; productRef = 48EAD5882BDC3669006AA783 /* Stripe */; };
+		48EAD58B2BDC8746006AA783 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 48EAD58A2BDC8746006AA783 /* FirebaseStorage */; };
 		5093DB202943E2A40092D8F2 /* CustomizedCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5093DB1F2943E2A40092D8F2 /* CustomizedCameraViewController.swift */; };
 		50F8ED132A032D2800430FAF /* DebugStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F8ED122A032D2800430FAF /* DebugStore.swift */; };
 		50F8ED152A0334F300430FAF /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F8ED142A0334F300430FAF /* DebugView.swift */; };
@@ -152,6 +153,7 @@
 				48067B022BC8892D004426C3 /* FirebaseFirestore in Frameworks */,
 				48067AFE2BC879EF004426C3 /* FirebaseAuth in Frameworks */,
 				F2A9194B46331BCC21F9366E /* libPods-StepVision.a in Frameworks */,
+				48EAD58B2BDC8746006AA783 /* FirebaseStorage in Frameworks */,
 				48EAD5852BDBF70A006AA783 /* StripePaymentSheet in Frameworks */,
 				48EAD5892BDC3669006AA783 /* Stripe in Frameworks */,
 			);
@@ -439,6 +441,7 @@
 				48067B012BC8892D004426C3 /* FirebaseFirestore */,
 				48EAD5842BDBF70A006AA783 /* StripePaymentSheet */,
 				48EAD5882BDC3669006AA783 /* Stripe */,
+				48EAD58A2BDC8746006AA783 /* FirebaseStorage */,
 			);
 			productName = CameraKitSample;
 			productReference = 0FF07ECA23D79DC400CFFA3F /* StepVision.app */;
@@ -1224,6 +1227,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 48EAD5832BDBF6CB006AA783 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
 			productName = Stripe;
+		};
+		48EAD58A2BDC8746006AA783 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48067AFA2BC8591B004426C3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

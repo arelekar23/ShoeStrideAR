@@ -9,6 +9,7 @@
 import Foundation
 import FirebaseFirestore
 import FirebaseAuth
+import FirebaseStorage
 
 struct Shoes: Codable {
     let shoeName: String
@@ -116,7 +117,86 @@ class FirestoreAPIManager {
         }
     }
 
+
+    func returnCurrentUserProfileImageUrl(completion: @escaping (String?) -> Void) {
+        guard let currentUser = Auth.auth().currentUser else {
+            // No logged-in user, return nil
+            completion(nil)
+            return
+        }
+
+        let db = Firestore.firestore()
+        let userRef = db.collection("users").document(currentUser.uid)
+
+        userRef.getDocument { document, error in
+            if let error = error {
+                // Handle the error
+                print("Error fetching user document: \(error.localizedDescription)")
+                completion(nil)
+                return
+            }
+
+            if let document = document, document.exists {
+                // User document exists, check for profile image URL
+                if let profileImageURL = document.data()?["profileImageURL"] as? String {
+                    // Profile image URL found, return it
+                    completion(profileImageURL)
+                } else {
+                    // Profile image URL not found
+                    print("Profile image URL not found in user document")
+                    completion(nil)
+                }
+            } else {
+                // User document does not exist
+                print("User document does not exist")
+                completion(nil)
+            }
+        }
+    }
+
     
+    func returnCurrentUserName(completion: @escaping (String) -> Void) {
+        guard let currentUser = Auth.auth().currentUser else {
+            completion("")
+            return
+        }
+
+        if let displayName = currentUser.displayName {
+            // If display name is available, return it
+            completion(displayName)
+        } else {
+            // Fetch the name from Firestore
+            let db = Firestore.firestore()
+            let userCollection = db.collection("users").document(currentUser.uid)
+
+            userCollection.getDocument { (document, error) in
+                if let error = error {
+                    // Handle the error
+                    print("Error fetching user document: \(error.localizedDescription)")
+                    completion("")
+                    return
+                }
+
+                if let document = document, document.exists {
+                    if let userData = document.data(),
+                       let userName = userData["username"] as? String {
+                        // Use the fetched user name
+                        completion(userName)
+                    } else {
+                        // Name not found in user document
+                        print("Name not found in user document")
+                        completion("")
+                    }
+                } else {
+                    // User document does not exist
+                    print("User document does not exist")
+                    completion("")
+                }
+            }
+        }
+    }
+
+
     func removeFromCart(shoes: Shoes, completion: @escaping (Result<Void, Error>, Bool) -> Void) {
         let db = Firestore.firestore()
         let userCollection = db.collection("users")
@@ -253,6 +333,65 @@ class FirestoreAPIManager {
             completion(.success(cartItems))
         }
     }
+    
+    func uploadImage(imageData: Data, completion: @escaping (Result<String, Error>) -> Void) {
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        
+        // Create a reference to the file you want to upload
+        let imageRef = storageRef.child("images/\(UUID().uuidString).jpg")
+        
+        // Upload the file to the path "images/[UUID].jpg"
+        let uploadTask = imageRef.putData(imageData, metadata: nil) { metadata, error in
+            guard let _ = metadata else {
+                if let error = error {
+                    // Uh-oh, an error occurred!
+                    completion(.failure(error))
+                }
+                return
+            }
+            
+            imageRef.downloadURL { url, error in
+                if let error = error {
+                    // Handle any errors
+                    completion(.failure(error))
+                } else if let downloadURL = url {
+                    // Get the download URL for the image
+                    let urlString = downloadURL.absoluteString
+                    
+                    // Update the Firestore document with the image URL
+                    let db = Firestore.firestore()
+                    let userRef = db.collection("users").document(Auth.auth().currentUser!.uid)
+                    userRef.setData(["profileImageURL": urlString], merge: true) { error in
+                        if let error = error {
+                            // Handle error
+                            completion(.failure(error))
+                        } else {
+                            // Success, return image URL
+                            completion(.success(urlString))
+                        }
+                    }
+                }
+            }
+        }
+        
+        // Observe changes in status of the upload
+        uploadTask.observe(.progress) { snapshot in
+            // Upload progress
+        }
+        
+        uploadTask.observe(.success) { snapshot in
+            // Upload completed successfully
+        }
+        
+        uploadTask.observe(.failure) { snapshot in
+            if let error = snapshot.error {
+                // Handle upload failure
+                completion(.failure(error))
+            }
+        }
+    }    
+
 }
 
 
