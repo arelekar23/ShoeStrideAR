@@ -269,6 +269,11 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         let selectedOption = profileItems[indexPath.row]
         
         switch selectedOption {
+        
+        case "My Orders":
+            
+          performSegue(withIdentifier: "ToMyOrdersVC", sender: self)
+            
         case "Logout":
             do {
                 try Auth.auth().signOut()

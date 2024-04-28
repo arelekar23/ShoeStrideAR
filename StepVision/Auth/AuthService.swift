@@ -42,7 +42,8 @@ class AuthService {
                     "username": username,
                     "email": email,
                     "cart": [String](),
-                    "favorites": [String]()
+                    "favorites": [String](),
+                    "favoriteShoes": [String]()
                 ]) { error in
                     if let error = error {
                         completion(false, error)

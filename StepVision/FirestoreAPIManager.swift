@@ -297,6 +297,57 @@ class FirestoreAPIManager {
         }
     }
 
+    func fetchOrders(completion: @escaping ([Order]?) -> Void) {
+        guard let currentUser = Auth.auth().currentUser else {
+            print("No logged-in user.")
+            completion(nil)
+            return
+        }
+
+        let db = Firestore.firestore()
+        let userCollection = db.collection("users")
+        let userDocument = userCollection.document(currentUser.uid)
+        
+        userDocument.getDocument { (document, error) in
+            if let error = error {
+                print("Error fetching orders document: \(error.localizedDescription)")
+                completion(nil)
+                return
+            }
+            
+            guard let document = document, document.exists else {
+                print("User document does not exist.")
+                completion(nil)
+                return
+            }
+            
+            // Parse orders array
+            if let ordersArray = document.data()?["orders"] as? [[String: Any]] {
+                var orders: [Order] = []
+                for orderData in ordersArray {
+                    if let description = orderData["description"] as? String,
+                       let image = orderData["image"] as? String,
+                       let price = orderData["price"] as? Double,
+                       let quantity = orderData["quantity"] as? Int,
+                       let shoeName = orderData["shoeName"] as? String,
+                       let timestamp = orderData["timestamp"] as? TimeInterval {
+                       let order = Order(description: description,
+                                               image: image,
+                                               price: price,
+                                               quantity: quantity,
+                                               shoeName: shoeName,
+                                               timestamp: timestamp)
+                       orders.append(order)
+                    }
+                }
+                completion(orders)
+            } else {
+                print("No orders found.")
+                completion(nil)
+            }
+        }
+    }
+
     
     func fetchFavoritesCount(completion: @escaping (Int?) -> Void) {
         guard let currentUser = Auth.auth().currentUser else {

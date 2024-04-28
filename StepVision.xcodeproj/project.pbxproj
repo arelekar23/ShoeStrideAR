@@ -55,6 +55,8 @@
 		50F8ED152A0334F300430FAF /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F8ED142A0334F300430FAF /* DebugView.swift */; };
 		50F8ED172A03392600430FAF /* LensGroupIDsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F8ED162A03392600430FAF /* LensGroupIDsView.swift */; };
 		50F8ED192A033FF400430FAF /* APITokenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F8ED182A033FF400430FAF /* APITokenView.swift */; };
+		7504ADB82BDD4E71007DE672 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7504ADB72BDD4E71007DE672 /* Order.swift */; };
+		7504ADBA2BDD4FD3007DE672 /* ViewOrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7504ADB92BDD4FD3007DE672 /* ViewOrdersVC.swift */; };
 		A678629229419A8D00F5AF06 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A678629429419A8D00F5AF06 /* Localizable.strings */; };
 		F2A9194B46331BCC21F9366E /* libPods-StepVision.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBEEC2CF1CACD603370E57AD /* libPods-StepVision.a */; };
 /* End PBXBuildFile section */
@@ -131,6 +133,8 @@
 		50F8ED162A03392600430FAF /* LensGroupIDsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LensGroupIDsView.swift; sourceTree = "<group>"; };
 		50F8ED182A033FF400430FAF /* APITokenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITokenView.swift; sourceTree = "<group>"; };
 		5BF194BD9CAB638B7CF8B766 /* Pods-CameraKitSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CameraKitSampleTests.release.xcconfig"; path = "Target Support Files/Pods-CameraKitSampleTests/Pods-CameraKitSampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		7504ADB72BDD4E71007DE672 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		7504ADB92BDD4FD3007DE672 /* ViewOrdersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewOrdersVC.swift; sourceTree = "<group>"; };
 		9A27A7977E990FF3BA7D2F75 /* Pods-CameraKitSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CameraKitSample.release.xcconfig"; path = "Target Support Files/Pods-CameraKitSample/Pods-CameraKitSample.release.xcconfig"; sourceTree = "<group>"; };
 		9E2C4409553480641E55EB29 /* Pods-CameraKitSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CameraKitSample.debug.xcconfig"; path = "Target Support Files/Pods-CameraKitSample/Pods-CameraKitSample.debug.xcconfig"; sourceTree = "<group>"; };
 		A13388AFC0846B3663850EB2 /* Pods-StepVision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StepVision.release.xcconfig"; path = "Target Support Files/Pods-StepVision/Pods-StepVision.release.xcconfig"; sourceTree = "<group>"; };
@@ -280,6 +284,7 @@
 			children = (
 				489E64582BC682D50081B7E9 /* ProfileVC.swift */,
 				484730242BC68C9C002DFA57 /* Profile.storyboard */,
+				7504ADB92BDD4FD3007DE672 /* ViewOrdersVC.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -373,6 +378,7 @@
 			children = (
 				48067AFF2BC87B31004426C3 /* RegisterUserRequest.swift */,
 				48067B032BC88CB7004426C3 /* LoginUserRequest.swift */,
+				7504ADB72BDD4E71007DE672 /* Order.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -664,6 +670,7 @@
 				50F8ED192A033FF400430FAF /* APITokenView.swift in Sources */,
 				48A8E5C32BBFF32C001A308A /* HomeVC.swift in Sources */,
 				48EAD57E2BDA6C2A006AA783 /* CartViewController.swift in Sources */,
+				7504ADB82BDD4E71007DE672 /* Order.swift in Sources */,
 				48067B042BC88CB7004426C3 /* LoginUserRequest.swift in Sources */,
 				48EAD57C2BDA5B8D006AA783 /* CartTableViewCell.swift in Sources */,
 				489E64592BC682D50081B7E9 /* ProfileVC.swift in Sources */,
@@ -682,6 +689,7 @@
 				4878B4FE2BBD23AE00CDD234 /* ARViewController.swift in Sources */,
 				0F16357923F1E30900DA79A0 /* ApplicationInfo.swift in Sources */,
 				50F8ED132A032D2800430FAF /* DebugStore.swift in Sources */,
+				7504ADBA2BDD4FD3007DE672 /* ViewOrdersVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
